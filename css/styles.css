@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --vertfonce: #A3A380;
+    --vertlime: #D6CE93;
+    --vertpale: #EFEBCE;
+    --orange: #D8A48F;
+    --rose: #BF6F7E;
+    --gris: #8C8C8C;
+    --Mukta: "Mukta", sans-serif;
+    --Gorditas: "Gorditas", serif;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: var(--Mukta);
+    margin: 0;
+}
+
+/*SECTION HEADER */ 
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/img_arriere_plan/scene4_fond_01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 30vmin;
+    margin: 0;
+    padding-top:10vh;
+    font-family: var(--Gorditas);
+    color: var(--rose)
+}
+
+.appel-action {
+    text-align: center;
+    position: absolute;
+    bottom: 10vh;
+    left: 50%;
+}
+
+.appel-action svg {
+    width: 3vw;
+    min-width: 40px;
+    max-width: 55px;
+    fill: var(--rose);
+}
+
+header p {
+    font-size: 2vmin;
+    color:#8C8C8C;
+    min-width: 25px;
+    position: absolute;
+    bottom: 1vh;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--rose)
+}
+header a:hover {
+    text-decoration: none;
+    color: var(--orange)
+}
+
+/* SECTION 1 */
+#section1 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/img_arriere_plan/scene1_fond_avec_trou.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 0;
+
+}
+/* SECTION 2 */
+#section2 {
+    width: 100vw;
+    height: 300vh;
+    background-image: url("../img/img_arriere_plan/scene2_fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+
+}
+/* SECTION 3 */
+#section3 {
+    width: 100vw;
+    height: 300vh;
+    background-image: url("../img/img_arriere_plan/scene3_fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+/* SECTION 4 */
+#section4 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/img_arriere_plan/scene4_fond_01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 0;
+}
+
+#section4-grotte {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 0;
+}
+
+.spritesheet1 {
+    width: 510px;
+    height: 510px;
+    background-image: url("../img/img_personnages/spritesheet_kiwi.png");
+    background-size: 61200px 510px;
+    animation-name: sprite1;
+    animation-duration: 2s;
+    animation-timing-function: steps(120);
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+@keyframes sprite1 {
+    from { background-position: 0px; }
+    to { background-position: -61200px; }
+}
+
+/* SECTION 5 */
+#section5 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/img_arriere_plan/scene5_fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 0;
+}
+.spritesheet2 {
+    width: 361px;
+    height: 361px;
+    background-image: url("../img/img_elements_visuels/spritesheet_enseigne.png");
+    background-size: 17278px 361px;
+    animation-name: sprite2;
+    animation-duration: 2s;
+    animation-timing-function: steps(47);
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+@keyframes sprite2 {
+    from { background-position: 0px; }
+    to { background-position: -16917px; }
+}
+
+body.is-scrolling .spritesheet2, body.is-scrolling .spritesheet1 {
+    animation-play-state: running;
+
+}
+
+/* SECTION 6 */
+#section6 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/img_arriere_plan/scene6_fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 0;
+}
+
+/* FOOTER */
+footer {
+    background-color: #BF6F7E;
+}
+
+footer p {
+    margin: 0;
+    padding: 20px 10px;
+    text-align: center;
+    color: var(--vertpale);
+}
+
+footer a {
+    color: var(--vertlime);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--vertfonce);
+}

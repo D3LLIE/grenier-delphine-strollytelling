@@ -76,20 +76,30 @@ header a:hover {
 #section1 {
     width: 100vw;
     height: 100vh;
-    background-image: url("../img/img_arriere_plan/scene1_fond_avec_trou.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 0;
-
+    background-color:var(--vertlime);
 }
+
+.layer {
+    position: absolute;
+}
+
+.parallax {
+    height: 100vh;
+    font-size: 5vmin;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 100px;
+  }
+
+
 /* SECTION 2 */
 #section2 {
     width: 100vw;
     height: 300vh;
-    background-image: url("../img/img_arriere_plan/scene2_fond.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 100%;
+        background-image: url("../img/img_arriere_plan/scene2_fond.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100% 100%;
 
 }
 /* SECTION 3 */
@@ -121,20 +131,20 @@ header a:hover {
 }
 
 .spritesheet1 {
-    width: 510px;
-    height: 510px;
+    width: 40vw;
+    aspect-ratio: 1/1;
     background-image: url("../img/img_personnages/spritesheet_kiwi.png");
-    background-size: 61200px 510px;
+    background-size: 12000% 100%;
     animation-name: sprite1;
     animation-duration: 2s;
     animation-timing-function: steps(120);
     animation-iteration-count: infinite;
-    animation-play-state: paused;
+    animation-play-state: running;
 }
 
 @keyframes sprite1 {
     from { background-position: 0px; }
-    to { background-position: -61200px; }
+    to { background-position: -12000%; }
 }
 
 /* SECTION 5 */
@@ -147,20 +157,20 @@ header a:hover {
     background-position: 100% 0;
 }
 .spritesheet2 {
-    width: 361px;
-    height: 361px;
+    width: 40vw;
+    aspect-ratio: 1/1;
     background-image: url("../img/img_elements_visuels/spritesheet_enseigne.png");
-    background-size: 17278px 361px;
+    background-size: 4800% 100%;
     animation-name: sprite2;
     animation-duration: 2s;
-    animation-timing-function: steps(47);
+    animation-timing-function: steps(48);
     animation-iteration-count: infinite;
     animation-play-state: paused;
 }
 
 @keyframes sprite2 {
     from { background-position: 0px; }
-    to { background-position: -16917px; }
+    to { background-position: -4800%; }
 }
 
 body.is-scrolling .spritesheet2, body.is-scrolling .spritesheet1 {

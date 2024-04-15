@@ -75,21 +75,46 @@ header a:hover {
 /* SECTION 1 */
 #section1 {
     width: 100vw;
-    height: 100vh;
+    height: 300vh;
     background-color:var(--vertlime);
+    object-fit: cover;
+    object-position: 100% 100%;
+    
+}
+.layer img {
+    height: 100vh;
+    object-fit: cover;
 }
 
 .layer {
     position: absolute;
+    
 }
-
 .parallax {
+    width: 100vw;
     height: 100vh;
     font-size: 5vmin;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 100px;
+    overflow: hidden;
+    position: relative;
   }
+
+.para04 {
+    bottom: -15px;
+}
+
+#sec1-lilo{
+    height: 100%;
+    width: 30vw;
+    min-width: 20vw;
+    max-width: 30vw;
+}
+#sec1-lilo2{
+    position: absolute;
+    width: 20vw;
+    min-width: 15vw;
+    max-width: 20vw;
+right: 0;
+}
 
 
 /* SECTION 2 */
@@ -100,8 +125,12 @@ header a:hover {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 100% 100%;
-
 }
+
+#section2 img{
+    width: 25vw;
+}
+
 /* SECTION 3 */
 #section3 {
     width: 100vw;

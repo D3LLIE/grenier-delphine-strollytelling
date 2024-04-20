@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-------- HEADER -------->
     <header>
         <h1>Lilo</h1>
         <div class="appel-action"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -21,52 +22,148 @@
             © 2024 - Conception : Delphine Grenier et Kenza ElHarrif| Développement Web : Delphine Grenier.</p>
     </header>
     <main>
+        <!-------- SECTION 1 -------->
         <section id="section1">
-            <div class="section1">
             <div class="parallax"> 
-                <div class="layer para00"><img src="./img/img_arriere_plan/scene1_fond_avec_trou.png" alt="fond vert"></div>
-                <div class="layer para01"><img src="./img/img_arriere_plan/scene1_arbre_derriere.png" alt="arbres"></div>
+                <div class="layer para00"></div>
+                <div class="layer para01"></div>
                 <div class="layer para02">
-                    <p id="chapitre" class="sec1-phrase01">CHAPITRE 1 <br> LILO</p>
+                    <h3 id="chapitre" class="sec1-phrase01">CHAPITRE 1 <br> LILO</h3>
                     <p class="sec1-phrase02">Il était une fois..dans la forêt enchantée</p>
                     <p class="sec1-phrase03">Lilo, le chien au cœur pur, dansait parmi les rayons dorés du soleil.</p>
                     <p class="sec1-phrase04">Perdue dans ses rêveries, Lilo ne vit pas le trou qui se dressait devant elle et y tomba.</p>
                 </div>
-                <div class="layer para03"><img src="./img/img_arriere_plan/scene1_arbre_devant.png" alt="arbres"></div>
+                <div class="layer para03"></div>
                 <div class="layer para04"><img id="sec1-lilo" src="./img/img_personnages/Lilo_droite_heureuse.png" alt="chien"></div>
-                <div class="layer para05"><img src="./img/img_arriere_plan/scene1_buissons.png" alt="buissons"></div>
+                <div class="layer para05"></div>
               </div>
               <img id="sec1-lilo2" src="img/img_personnages/Lilo_tombe.png" alt="chien tombe">
               <p class="sec1-phrase05">Lilo tomba et tomba, emportée par le tourbillon de ses rêves.</p>
-              <p class="sec1-phrase06">CHAPITRE 2 <br> TÊTE DANS LES NUAGES</p>
-            </div>
+              <h3 class="sec1-phrase06">CHAPITRE 2 <br> TÊTE DANS LES NUAGES</h3>
+
+              <ul class="technique-gsap"> 
+                <li>...</li> 
+                <li>...</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger=</li> 
+                        <li>...</li> 
+                    </ul> 
+                </li> 
+            </ul>
         </section>
+
+        <!-------- SECTION 2 -------->
         <section id="section2">
-            <div class="section2">
             <div class="nuage-groupe">
                 <img class="nuage" src="./img/img_elements_visuels/nuage.png" alt="nuage">
                 <img class="lilo-assis" src="./img/img_personnages/Lilo_assise.png" alt="chien assis">
                 <img class="mitaine-peche" src="./img/img_personnages/Mimi_peche.png" alt="chat qui pêche">
             </div>
-            <img class="poissons poisson1" src="./img/img_elements_visuels/scene2_poisson_01.png" alt="">
-            <img class="poissons poisson2" src="./img/img_elements_visuels/scene2_poisson_02.png" alt="">
-            <img class="poissons poisson3" src="./img/img_elements_visuels/scene2_poisson_03.png" alt="">
-            <img class="poissons poisson4" src="./img/img_elements_visuels/scene2_poisson_04.png" alt="">
-        </div>
-        </section>
-        <section id="section3">
+            <img class="poissons poisson1" src="./img/img_elements_visuels/scene2_poisson_01.png" alt="poisson violet">
+            <img class="poissons poisson2" src="./img/img_elements_visuels/scene2_poisson_02.png" alt="poisson vert">
+            <img class="poissons poisson3" src="./img/img_elements_visuels/scene2_poisson_03.png" alt="poisson orange">
+            <img class="poissons poisson4" src="./img/img_elements_visuels/scene2_poisson_04.png" alt="gros poisson vert">
+            <div class="test"></div> 
 
+            <ul class="technique-gsap"> 
+                <li>...</li> 
+                <li>...</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger=</li> 
+                        <li>...</li> 
+                    </ul> 
+                </li> 
+            </ul>
+        </section>
+
+        <!-------- SECTION 3 -------->
+        <section id="section3">
+            <div id="sec3-nuage">
+                <div class="nuage-groupe">
+                    <img class="nuage" src="./img/img_elements_visuels/nuage.png" alt="nuage">
+                    <img class="lilo-mimi" src="./img/img_personnages/Lilo_Mimi_sur_dos.png" alt="nuage">
+                </div>
+            </div>
+            <img class="crystal crystal01" src="img/img_elements_visuels/scene3_crystal_01.png" alt="crystal vert">
+            <img class="crystal crystal02" src="img/img_elements_visuels/scene3_crystal_02.png" alt="crystal vert">
+            <div class="gros-crystal">
+                <img class="groupecrystal01" src="img/img_elements_visuels/scene3_groscrystal_01.png" alt="crystal vert">
+                <img class="groupecrystal02" src="img/img_elements_visuels/scene3_groscrystal_02.png" alt="crystal vert">
+                <img class="groupecrystal03" src="img/img_elements_visuels/scene3_groscrystal_03.png" alt="crystal vert">
+                <img class="groupecrystal04" src="img/img_elements_visuels/scene3_groscrystal_04.png" alt="crystal vert">
+            </div>
+            <ul class="technique-gsap"> 
+                <li>...</li> 
+                <li>...</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger=</li> 
+                        <li>...</li> 
+                    </ul> 
+                </li> 
+            </ul>
         </section>
         <section id="section4">
             <div class="spritesheet1"></div>
+
+            <ul class="technique-gsap"> 
+                <li>...</li> 
+                <li>...</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger=</li> 
+                        <li>...</li> 
+                    </ul> 
+                </li> 
+            </ul>
         </section>
+
+        <!-------- SECTION 4 -------->
         <section id="section4-grotte">
+
+            <ul class="technique-gsap"> 
+                <li>...</li> 
+                <li>...</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger=</li> 
+                        <li>...</li> 
+                    </ul> 
+                </li> 
+            </ul>
         </section>
+
+        <!-------- SECTION 5 -------->
         <section id="section5">
             <div class="spritesheet2"></div>
+
+            <ul class="technique-gsap"> 
+                <li>...</li> 
+                <li>...</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger=</li> 
+                        <li>...</li> 
+                    </ul> 
+                </li> 
+            </ul>
         </section>
+
+        <!-------- SECTION 6 -------->
         <section id="section6">
 
+            <ul class="technique-gsap"> 
+                <li>...</li> 
+                <li>...</li> 
+                <li>scrollTrigger 
+                    <ul> 
+                        <li>trigger=</li> 
+                        <li>...</li> 
+                    </ul> 
+                </li> 
+            </ul>
         </section>
     </main>
     <footer>

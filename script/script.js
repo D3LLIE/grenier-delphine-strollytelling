@@ -12,13 +12,24 @@ window.addEventListener('scroll', function() {
         body.classList.remove('is-scrolling');
        }, 100); 
   });
+let secUnParallax = gsap.timeline();
+  secUnParallax.to(".para00",{x:"-40%",duration:18,ease:'none'},'<')
+  secUnParallax.to(".para04",{y:"2%", yoyo: true, repeat: 40, duration:0.5 ,ease:'none'},'<')
+  secUnParallax.to(".para01",{x:"-40%",duration:17,ease:'none'},'<')
+  secUnParallax.to(".para03",{x:"-40%",duration:16,ease:'none'},'<')
+  secUnParallax.to(".para05",{x:"-40%",duration:12,ease:'none'},'<')
+  secUnParallax.to(".para04",{x:"200%",duration:10 ,ease:'none'}, 12)
+  secUnParallax.to(".para04",{opacity: "0", duration: 3})
+  secUnParallax.to("#sec1-lilo2",{y:"200%",duration:5 ,ease:'none'})
+  secUnParallax.to("#sec1-lilo2",{opacity: "0", duration: 3})
+  secUnParallax.fromTo(".sec1-phrase01", {opacity: 0}, {opacity: 1, duration: 0.5}, 1)
+  secUnParallax.to(".sec1-phrase01", {opacity: 0, duration: 0.5}, '<4')
+  secUnParallax.fromTo(".sec1-phrase02", {opacity: 0}, {opacity: 1, duration: 0.5}, '<0.5')
+  secUnParallax.to(".sec1-phrase02", {opacity: 0, duration: 0.5}, '<4')
+  secUnParallax.fromTo(".sec1-phrase03", {opacity: 0}, {opacity: 1, duration: 0.5}, '<0.5')
+  secUnParallax.to(".sec1-phrase03", {opacity: 0, duration: 0.5}, '<4')
+  secUnParallax.fromTo(".sec1-phrase04", {opacity: 0}, {opacity: 1, duration: 0.5}, '<0.5')
+  secUnParallax.to(".sec1-phrase04", {opacity: 0, duration: 0.5}, '<4')
 
-  gsap
-  .timeline()
-  .to(".para00",{x:"-40%",duration:18,ease:'none'},'<')
-  .to(".para04",{y:"2%", yoyo: true, repeat: 40, duration:0.5 ,ease:'none'},'<')
-  .to(".para01",{x:"-40%",duration:17,ease:'none'},'<')
-  .to(".para02",{x:"-40%",duration:16,ease:'none'},'<')
-  .to(".para03",{x:"-40%",duration:14,ease:'none'},'<')
-  .to(".para05",{x:"-40%",duration:12,ease:'none'},'<')
-  .to(".para04",{x:"200%",duration:10 ,ease:'none'}, 12)
+  let secDeux = gsap.timeline();
+  secDeux.to(".nuage-groupe",{y:"-5%", yoyo: true, repeat: -1, ease: 'power1.inOut', duration: 0.5})

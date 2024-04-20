@@ -17,7 +17,13 @@ body {
     font-family: var(--Mukta);
     margin: 0;
 }
-
+#chapitre {
+    font-size: 10vw;
+    font-family: var(--Gorditas);
+    color: var(--rose);
+    text-align: center;
+    width: 100%;
+}
 /*SECTION HEADER */ 
 
 header {
@@ -81,6 +87,10 @@ header a:hover {
     object-position: 100% 100%;
     
 }
+
+.section1 {
+    position: relative;
+}
 .layer img {
     height: 100vh;
     object-fit: cover;
@@ -88,7 +98,6 @@ header a:hover {
 
 .layer {
     position: absolute;
-    
 }
 .parallax {
     width: 100vw;
@@ -97,6 +106,7 @@ header a:hover {
     overflow: hidden;
     position: relative;
   }
+  
 
 .para04 {
     bottom: -15px;
@@ -113,22 +123,82 @@ header a:hover {
     width: 20vw;
     min-width: 15vw;
     max-width: 20vw;
-right: 0;
+    right: 0;
 }
+.para02 {
+    width: 80%;
+    left: 10%;
+    z-index: 100;
+}
+
+.para02 p {
+    position: absolute;
+    color: var(--gris);
+    font-size: 5vw;
+}
+
+
+
 
 
 /* SECTION 2 */
 #section2 {
     width: 100vw;
     height: 300vh;
-        background-image: url("../img/img_arriere_plan/scene2_fond.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 100% 100%;
+    background-image: url("../img/img_arriere_plan/scene2_fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+}
+.section2 {
+    position: relative;
 }
 
-#section2 img{
-    width: 25vw;
+.nuage-groupe {
+    position: absolute;
+    left: 50vw;
+    top: 10vh;
+}
+
+.nuage {
+    width: 40vw;
+    min-width: 25vw;
+}
+
+.lilo-assis {
+    right: 5%;
+    position: absolute;
+    width: 60%;
+    bottom: 30%;
+}
+
+.mitaine-peche {
+    left: -5%;
+    position: absolute;
+    width: 60%;
+    bottom: 20%;
+}
+
+.poissons {
+    width: 20%;
+    position: absolute;
+}
+
+.poisson3 {
+    top: 185vh;
+    left: 5vw;
+}
+
+.poisson1 {
+    top: 115vh;
+    right: 5vw;
+    transform: scaleX(-1) scaleY(1);
+}
+
+.poisson4 {
+    top: 155vh;
+    left: 40vw;
+    width: 25%;
 }
 
 /* SECTION 3 */
@@ -168,7 +238,7 @@ right: 0;
     animation-duration: 2s;
     animation-timing-function: steps(120);
     animation-iteration-count: infinite;
-    animation-play-state: running;
+    animation-play-state: paused;
 }
 
 @keyframes sprite1 {

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');¸
+@import url('https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 
 img, div {
  border: 1px solid red;
@@ -11,7 +11,7 @@ img, div {
     --vertpale: #EFEBCE;
     --orange: #D8A48F;
     --rose: #BF6F7E;
-    --gris: #8C8C8C;
+    --gris: #3b3b3b;
     --Mukta: "Mukta", sans-serif;
     --Gorditas: "Gorditas", serif;
 }
@@ -100,13 +100,17 @@ header a:hover {
     height: 100%;
 }
 
-.parallax {
+.parallax, .tombe {
     width: 100vw;
     height: 100vh;
     font-size: 5vmin;
     overflow: hidden;
     position: relative;
-  }
+}
+
+.tombe {
+    height: 200vh;
+}
 
 .para00 {
     background-image: url("../img/img_arriere_plan/scene1_fond_avec_trou.png");
@@ -116,12 +120,12 @@ header a:hover {
     background-image: url("../img/img_arriere_plan/scene1_arbre_derriere.png");
 }
 
-.para04 {
+.para03 {
     height: 50%;
     bottom:-5%;
 }
 
-.para03 {
+.para04 {
     background-image: url("../img/img_arriere_plan/scene1_arbre_devant.png");
 }
 
@@ -130,12 +134,15 @@ header a:hover {
     bottom: -15px;
 }
 
-#sec1-lilo{
+#sec1-lilo {
     aspect-ratio: 7/5;
     width: 30vw;
     min-width: 20vw;
     max-width: 30vw;
+    position: absolute;
+    bottom: 0;
 }
+
 #sec1-lilo2{
     position: absolute;
     width: 20vw;
@@ -151,13 +158,10 @@ header a:hover {
 
 .para02 p {
     position: absolute;
-    color: var(--black);
+    color: var(--gris);
     font-size: 5vw;
     top: 0;
 }
-
-
-
 
 
 /* SECTION 2 */

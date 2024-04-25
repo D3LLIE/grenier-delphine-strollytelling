@@ -28,6 +28,7 @@ gsap.to(".nuage-groupe",{y:"-5%", yoyo: true, repeat: -1, ease: 'power1.inOut', 
 let secUnParallax = gsap.timeline({
   scrollTrigger: {
     pin: true,
+    pinSpacing: true,
     scrub: true,
     markers: true,
     start: 'center 50%',
@@ -95,3 +96,15 @@ let secTrois = gsap.timeline();
   secTrois.to(".groupecrystal01",{y:"100%",duration:0.5, rotate:"-20deg" ,ease:'power1.out'},"<")
   secTrois.to(".groupecrystal04",{y:"-100%",duration:0.5 ,ease:'power1.out'},"<")
 
+// Section Quatre
+let secQuatre = gsap.timeline();
+secQuatre.to("#sec4-nuage", {x: '100vw', duration: 10, ease: 'power1.in'})
+
+let secQuatreGrotte = gsap.timeline();
+  secQuatreGrotte.to(".grotte-groupe", {y:"-5%", yoyo: 'true', repeat: 20, ease: 'power1.inOut', duration: 0.5})
+  secQuatreGrotte.fromTo(".yeux-oiseau", {opacity: 0}, {opacity: 1, duration: 0.5})
+  secQuatreGrotte.to(".grotte-groupe", {x: '100vw', duration: 1, ease: 'power.in'})
+
+// Section Six
+let secSix = gsap.timeline();
+secSix.fromTo('.escalier', {x: '100%'}, {x: '-10px', duration: 1, stagger: 0.1})

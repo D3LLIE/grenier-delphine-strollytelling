@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 
-img, div {
- border: 1px solid red;
-}
 
 :root {
     --vertfonce: #A3A380;
@@ -32,7 +29,7 @@ body {
 section {
     position: relative;
 }
-/*SECTION HEADER */ 
+/*SECTION HEADER */
 
 header {
     width: 100vw;
@@ -81,6 +78,11 @@ header a {
 header a:hover {
     text-decoration: none;
     color: var(--orange)
+}
+
+div, body img {
+    position: absolute;
+    border: 1px solid red;
 }
 
 /* SECTION 1 */
@@ -175,9 +177,10 @@ header a:hover {
 }
 
 .nuage-groupe {
-    position: absolute;
     left: 50vw;
     top: 10vh;
+    width: 40vw;
+    height: 70vh;
 }
 
 .nuage {
@@ -186,22 +189,19 @@ header a:hover {
 }
 
 .lilo-assis {
-    right: -4%;
-    position: absolute;
+    top: 5%;
+    right: 5%;
     width: 25vw;
-    bottom: 30%;
 }
 
 .mitaine-peche {
     left: -5%;
-    position: absolute;
     width: 23vw;
     bottom: 20%;
 }
 
 .poissons {
     width: 15vw;
-    position: absolute;
 }
 
 .poisson3 {
@@ -234,7 +234,6 @@ header a:hover {
 #sec3-nuage {
     width: 45vw;
     height: 45vw;
-    position: absolute;
     left: 30vw;
 }
 
@@ -245,12 +244,10 @@ header a:hover {
 
 .lilo-mimi {
     width: 30vw;
-    position: absolute;
     left: 15%;
 }
 
 .crystal {
-    position: absolute;
     width: 10vw;
 }
 .crystal img{
@@ -268,37 +265,37 @@ header a:hover {
 }
 
 .gros-crystal {
-    position: absolute;
-    left: 45vw;
+    left: 33vw;
     top: 175vh;
-    width: 10%;
+    width: 30%;
     height: 25%;
 }
 
 .gros-crystal img {
-    position: absolute;
     width: 10vw;
 }
 
 .gros-crystal img:nth-child(1) {
     z-index: 100;
-    left: -80%;
     bottom: -5%;
     width: 25vw;
+    left: 9%;
 }
 
 .gros-crystal img:nth-child(2) {
-    left: -60%;
+    left: 10%;
     bottom: 0;
 }
 
 .gros-crystal img:nth-child(3) {
-    right: -70%;
+    right: 8%;
     bottom: 0;
 }
 
 .gros-crystal img:nth-child(4) {
 z-index: 0;
+left: 33%;
+bottom: 5%;
 }
 /* SECTION 4 */
 #section4 {
@@ -310,16 +307,31 @@ z-index: 0;
     background-position: 30% 0;
 }
 
-#section4 img {
-    position: absolute;
-}
 
 #section4-grotte {
     width: 100vw;
     height: 100vh;
-    position: relative;
     top: 100vh;
     background-color: black;
+}
+
+#sec4-nuage, #sec5-nuage {
+    width: 40vw;
+    height: 65vh;
+    left: 0;
+    top: 15vh;
+}
+
+#sec4-nuage .nuage-groupe, #sec5-nuage .nuage-groupe {
+    top: 0;
+    left:0;
+}
+
+.grotte-groupe {
+    width: 30vw;
+    height: 20vw;
+    top: 30vh;
+    left: 15vh;
 }
 
 .yeux-chien {
@@ -341,7 +353,6 @@ z-index: 0;
 }
 
 .spritesheet1 {
-    position: absolute;
     top: 210vh;
     left: 30%;
     width: 40vw;
@@ -363,17 +374,23 @@ z-index: 0;
 /* SECTION 5 */
 #section5 {
     width: 100vw;
+    height: 300vh;
+    background-color: var(--vertpale);
+}
+
+#div-section5 {
+    width: 100vw;
     height: 100vh;
+    top: 100vh;
+    left: 0;
     background-image: url("../img/img_arriere_plan/scene5_fond.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 0;
 }
 
-
-
 .spritesheet2 {
-    width: 40vw;
+    width: 30vw;
     aspect-ratio: 1/1;
     background-image: url("../img/img_elements_visuels/spritesheet_enseigne.png");
     background-size: 4800% 100%;
@@ -382,6 +399,8 @@ z-index: 0;
     animation-timing-function: steps(48);
     animation-iteration-count: infinite;
     animation-play-state: paused;
+    right: 10vw;
+    bottom: 0;
 }
 
 @keyframes sprite2 {
@@ -402,6 +421,40 @@ body.is-scrolling .spritesheet2, body.is-scrolling .spritesheet1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 0;
+}
+
+.escalier {
+    width: 80vw;
+    aspect-ratio: 1658/127;
+}
+
+.section6-01 {
+    width: 50%;
+    height: 50%;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.escalier:nth-child(1) {
+    bottom: -4vh;
+    z-index: 5;
+    right: -65%;
+}
+.escalier:nth-child(2) {
+   bottom: 5vh;
+    z-index: 4;
+    right: -75%;
+}
+.escalier:nth-child(3) {
+    bottom: 15vh;
+    z-index: 3;
+    right: -85%;
+}
+.escalier:nth-child(4) {
+    bottom: 23vh;
+    z-index: 2;
+    right: -95%;
 }
 
 /* FOOTER */

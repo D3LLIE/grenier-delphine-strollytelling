@@ -29,6 +29,19 @@ body {
 section {
     position: relative;
 }
+
+div, body img {
+    position: absolute;
+    border: 1px solid red;
+}
+
+.chapitres {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: var(--vertpale);
+}
+
 /*SECTION HEADER */
 
 header {
@@ -80,11 +93,6 @@ header a:hover {
     color: var(--orange)
 }
 
-div, body img {
-    position: absolute;
-    border: 1px solid red;
-}
-
 /* SECTION 1 */
 #section1 {
     width: 100vw;
@@ -133,7 +141,6 @@ div, body img {
 
 .para05 {
     background-image: url("../img/img_arriere_plan/scene1_buissons.png");
-    bottom: -15px;
 }
 
 #sec1-lilo {
@@ -152,6 +159,7 @@ div, body img {
     max-width: 20vw;
     right: 0;
 }
+
 .para02 {
     width: 80%;
     left: 10%;
@@ -176,11 +184,16 @@ div, body img {
     background-position: 100% 100%;
 }
 
+.section02 {
+    width: 100vw;
+    height: 200vh;
+}
+
 .nuage-groupe {
     left: 50vw;
     top: 10vh;
     width: 40vw;
-    height: 70vh;
+    aspect-ratio: 1/1;
 }
 
 .nuage {
@@ -197,7 +210,7 @@ div, body img {
 .mitaine-peche {
     left: -5%;
     width: 23vw;
-    bottom: 20%;
+    top: 20%;
 }
 
 .poissons {
@@ -219,6 +232,12 @@ div, body img {
     top: 155vh;
     left: 40vw;
     width: 25vw;
+}
+
+.poisson2 {
+    width: 70vw;
+    bottom: 15vh;
+    left: -100%;
 }
 
 /* SECTION 3 */
@@ -268,7 +287,7 @@ div, body img {
     left: 33vw;
     top: 175vh;
     width: 30%;
-    height: 25%;
+    aspect-ratio: 1/1;
 }
 
 .gros-crystal img {
@@ -317,7 +336,7 @@ bottom: 5%;
 
 #sec4-nuage, #sec5-nuage {
     width: 40vw;
-    height: 65vh;
+    aspect-ratio: 1/1;
     left: 0;
     top: 15vh;
 }
@@ -416,11 +435,21 @@ body.is-scrolling .spritesheet2, body.is-scrolling .spritesheet1 {
 /* SECTION 6 */
 #section6 {
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     background-image: url("../img/img_arriere_plan/scene6_fond.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 0;
+}
+
+
+
+.escaliers {
+    width: 30vw;
+    height: 1/1;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
 }
 
 .escalier {
@@ -429,11 +458,9 @@ body.is-scrolling .spritesheet2, body.is-scrolling .spritesheet1 {
 }
 
 .section6-01 {
-    width: 50%;
-    height: 50%;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    top: 100vh;
 }
 
 .escalier:nth-child(1) {
@@ -460,6 +487,7 @@ body.is-scrolling .spritesheet2, body.is-scrolling .spritesheet1 {
 /* FOOTER */
 footer {
     background-color: #BF6F7E;
+    width: 100vw;
 }
 
 footer p {

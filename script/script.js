@@ -55,7 +55,7 @@ let secUnParallax = gsap.timeline({
 
 let secUnTombe= gsap.timeline({
   scrollTrigger: {
-    scrub: true,
+
     markers: true,
     pin: true,
     start: '25% 50%',

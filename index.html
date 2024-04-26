@@ -19,7 +19,7 @@
           </svg></div>
           <p><a href="https://tim-montmorency.com/timdoc/582-424MO/projet-scrollytelling/">Projet scrollytelling</a> créé
             dans le cadre du cours Optimisation Web - Intégration multimédia - Collège Montmorency.
-            © 2024 - Conception : Delphine Grenier et Kenza ElHarrif | Développement Web : Delphine Grenier.</p>
+            © 2024 - Conception : Delphine Grenier et Kenza El Harrif | Développement Web : Delphine Grenier.</p>
     </header>
     <main>
         <!-------- SECTION 1 -------->
@@ -29,10 +29,11 @@
                 <div class="layer para00"></div>
                 <div class="layer para01"></div>
                 <div class="layer para02">
-                    <h3 id="chapitre" class="sec1-phrase01">CHAPITRE 1 <br> LILO</h3>
+                    <div id="chapitre1">
+                        <h3 class="chapitre sec1-phrase01">CHAPITRE 1</h3>
+                        <h4 class="sous-chapitre sec1-phrase01">Lilo</h4>
+                    </div>
                     <p class="sec1-phrase02">Il était une fois..dans la forêt enchantée</p>
-                    <p class="sec1-phrase03">Lilo, le chien au cœur pur, dansait parmi les rayons dorés du soleil.</p>
-                    <p class="sec1-phrase04">Perdue dans ses rêveries, Lilo ne vit pas le trou qui se dressait devant elle et y tomba.</p>
                 </div>
                 <div class="layer para03"><img id="sec1-lilo" src="./img/img_personnages/Lilo_droite_heureuse.png" alt="chien"></div>
                 <div class="layer para04"></div>
@@ -40,16 +41,16 @@
               </div>
               <div class="tombe">
               <img id="sec1-lilo2" src="img/img_personnages/Lilo_tombe.png" alt="chien tombe">
-              <p class="sec1-phrase05">Lilo tomba et tomba, emportée par le tourbillon de ses rêves.</p>
-              <h3 class="sec1-phrase06">CHAPITRE 2 <br> TÊTE DANS LES NUAGES</h3>
+              <p class="textes sec1-phrase05">Lilo tomba et tomba, emportée par le tourbillon de ses rêves.</p>
             </div>
-              <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
+            <ul class="technique-gsap"> 
+                <li>backgroundPosition</li> 
+                <li>opacity</li> 
+                <li>text</li>
+                <li>x & y</li>
                 <li>scrollTrigger 
                     <ul> 
-                        <li>trigger=</li> 
-                        <li>...</li> 
+                        <li>trigger=#section1</li> 
                     </ul> 
                 </li> 
             </ul>
@@ -57,25 +58,40 @@
 
         <!-------- SECTION 2 -------->
         <section id="section2">
-            <div id="chapitre2" class="chapitres"></div>
-            <div class="section02">
-            <div class="nuage-groupe">
-                <img class="nuage" src="./img/img_elements_visuels/nuage.png" alt="nuage">
-                <img class="lilo-assis" src="./img/img_personnages/Lilo_assise.png" alt="chien assis">
-                <img class="mitaine-peche" src="./img/img_personnages/Mimi_peche.png" alt="chat qui pêche">
+            <div id="chapitre2" class="chapitres">
+                <h3 class="chapitre" >CHAPITRE 2</h3>
+                <h4 class="sous-chapitre">sur un nuage</h4>
+                <img class="poissons poisson2" src="./img/img_elements_visuels/scene2_poisson_02.png" alt="poisson vert">
             </div>
+            <div class="section02">
+                <div id="sec2-nuage">
+                    <div class="nuage-groupe">
+                        <img class="nuage" src="./img/img_elements_visuels/nuage.png" alt="nuage">
+                        <img class="lilo-assis" src="./img/img_personnages/Lilo_assise.png" alt="chien assis">
+                        <img class="mitaine-peche" src="./img/img_personnages/Mimi_peche.png" alt="chat qui pêche">
+                    </div>
+                </div>
+            <p class="textes sec2-phrase01">La tête dans les nuages, Lilo rencontra un chat appelé Mitaine.</p>
             <img class="poissons poisson1" src="./img/img_elements_visuels/scene2_poisson_01.png" alt="poisson violet">
-            <img class="poissons poisson2" src="./img/img_elements_visuels/scene2_poisson_02.png" alt="poisson vert">
+
             <img class="poissons poisson3" src="./img/img_elements_visuels/scene2_poisson_03.png" alt="poisson orange">
             <img class="poissons poisson4" src="./img/img_elements_visuels/scene2_poisson_04.png" alt="gros poisson vert">
+            <div class="sec2-texte">
+
+            </div>
             </div>
             <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
+                <li>backgroundPosition</li> 
+                <li>opacity</li> 
+                <li>text</li>
+                <li>x & y</li>
+                <li>MotionPathPlugin</li>
+                <ul> 
+                    <li>Motion Path sur le poisson</li> 
+                </ul> 
                 <li>scrollTrigger 
                     <ul> 
-                        <li>trigger=</li> 
-                        <li>...</li> 
+                        <li>trigger=#section2</li> 
                     </ul> 
                 </li> 
             </ul>
@@ -83,6 +99,12 @@
 
         <!-------- SECTION 3 -------->
         <section id="section3">
+            <div id="chapitre3" class="chapitres">
+                <h3 class="chapitre" >CHAPITRE 3</h3>
+                <h4 class="sous-chapitre">explosions de crystaux</h4>
+            </div>
+            <div class="section03">
+                <p class="textes sec3-phrase01">La tête dans les nuages, Lilo rencontra un chat appelé Mitaine.</p>
             <div id="sec3-nuage">
                 <div class="nuage-groupe">
                     <img class="nuage" src="./img/img_elements_visuels/nuage.png" alt="nuage">
@@ -96,19 +118,28 @@
                 <img class="groupecrystal02" src="img/img_elements_visuels/scene3_groscrystal_02.png" alt="crystal vert">
                 <img class="groupecrystal03" src="img/img_elements_visuels/scene3_groscrystal_03.png" alt="crystal vert">
                 <img class="groupecrystal04" src="img/img_elements_visuels/scene3_groscrystal_04.png" alt="crystal vert">
+                <span class="boom">BOOM</span>
+            </div>
             </div>
             <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
+                <li>backgroundPosition</li> 
+                <li>opacity</li> 
+                <li>text</li>
+                <li>x & y</li>
+                <li>scale</li>
                 <li>scrollTrigger 
                     <ul> 
-                        <li>trigger=</li> 
-                        <li>...</li> 
+                        <li>trigger=#section3</li> 
                     </ul> 
                 </li> 
             </ul>
         </section>
         <section id="section4">
+            <div id="chapitre4" class="chapitres">
+                <h3 class="chapitre" >CHAPITRE 4</h3>
+                <h4 class="sous-chapitre">une peur bleue</h4>
+            </div>
+            <div id="section04">
             <div id="sec4-nuage">
                 <div class="nuage-groupe">
                     <img class="nuage" src="./img/img_elements_visuels/nuage.png" alt="nuage">
@@ -117,16 +148,6 @@
             </div>
             <div class="spritesheet1"></div>
 
-            <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
-                <li>scrollTrigger 
-                    <ul> 
-                        <li>trigger=</li> 
-                        <li>...</li> 
-                    </ul> 
-                </li> 
-            </ul>
             <div id="section4-grotte">
                 <div class="grotte-groupe">
                     <img class="yeux-chien" src="./img/img_personnages/lilo_yeux.png" alt="yeux chien">
@@ -134,12 +155,24 @@
                 </div>
                 <img class="yeux-oiseau" src="./img/img_personnages/kiwi_yeux.png" alt="yeux oiseau">
             </div>
+        </div>
+        <ul class="technique-gsap"> 
+            <li>...</li> 
+            <li>...</li> 
+            <li>scrollTrigger 
+                <ul> 
+                    <li>trigger=</li> 
+                    <li>...</li> 
+                </ul> 
+            </li> 
+        </ul>
         </section>
 
         <!-------- SECTION 5 -------->
         <section id="section5">
             <div id="chapitre5" class="chapitres">
-                <h3>CHAPITRE 5</h3>
+                <h3 class="chapitre" >CHAPITRE 5</h3>
+                <h4 class="sous-chapitre">le dernier chemin</h4>
             </div>
             <div id="div-section5">
                 <div id="sec5-nuage">
@@ -165,7 +198,8 @@
         <!-------- SECTION 6 -------->
         <section id="section6">
             <div id="chapitre6" class="chapitres">
-                <h3>CHAPITRE 6</h3>
+                <h3 class="chapitre" >CHAPITRE 6</h3>
+                <h4 class="sous-chapitre">au revoir</h4>
             </div>
             <div class="section6-01">
                 <div class="escaliers">
@@ -193,7 +227,7 @@
     <footer>
         <p><a href="https://tim-montmorency.com/timdoc/582-424MO/projet-scrollytelling/">Projet scrollytelling</a> créé
             dans le cadre du cours Optimisation Web - Intégration multimédia - Collège Montmorency.
-            © 2024 - Conception : Delphine Grenier et Kenza ElHarrif | Développement Web : Delphine Grenier.</p>
+            © 2024 - Conception : Delphine Grenier et Kenza El Harrif | Développement Web : Delphine Grenier.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>

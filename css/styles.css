@@ -17,17 +17,30 @@ body {
     overflow-x: hidden;
     font-family: var(--Mukta);
     margin: 0;
+    width: 100vw;
 }
-#chapitre {
+.chapitre, .sous-chapitre {
     font-size: 10vw;
     font-family: var(--Gorditas);
-    color: var(--rose);
-    text-align: center;
+    color: var(--vertfonce);
+    text-align: left;
     width: 100%;
+    margin: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 20%;
+}
+
+.sous-chapitre {
+    font-size: 5vw;
+   color: var(--vertlime);
+   bottom: 43%;
+
 }
 
 section {
     position: relative;
+    overflow: hidden;
 }
 
 div, body img {
@@ -40,6 +53,15 @@ div, body img {
     height: 100vh;
     position: relative;
     background-color: var(--vertpale);
+}
+
+
+.textes {
+    position: absolute;
+    color: var(--gris);
+    font-size: 3vw;
+    top: 40%;
+    left: 2vw;
 }
 
 /*SECTION HEADER */
@@ -96,8 +118,7 @@ header a:hover {
 /* SECTION 1 */
 #section1 {
     width: 100vw;
-    height: 300vh;
-    background-color:var(--vertlime);
+    height: 900vh;
     object-fit: cover;
     object-position: 100% 100%;
 }
@@ -110,7 +131,7 @@ header a:hover {
     height: 100%;
 }
 
-.parallax, .tombe {
+.parallax{
     width: 100vw;
     height: 100vh;
     font-size: 5vmin;
@@ -119,7 +140,11 @@ header a:hover {
 }
 
 .tombe {
-    height: 200vh;
+    height: 500vh;
+    background-color: var(--orange);
+    font-size: 5vmin;
+    overflow: hidden;
+    position: relative;
 }
 
 .para00 {
@@ -166,6 +191,22 @@ header a:hover {
     z-index: 100;
 }
 
+
+#chapitre1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -5%;
+}
+
+#chapitre1 .chapitre {
+    color: var(--rose);
+}
+
+#chapitre1 .sous-chapitre {
+    color: var(--orange);
+}
+
 .para02 p {
     position: absolute;
     color: var(--gris);
@@ -174,24 +215,32 @@ header a:hover {
 }
 
 
+.sec1-phrase05 {
+    position: absolute;
+    color: var(--gris);
+    font-size: 3vw;
+    top: 20vh;
+}
+
+
 /* SECTION 2 */
 #section2 {
     width: 100vw;
-    height: 300vh;
-    background-image: url("../img/img_arriere_plan/scene2_fond.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 100%;
+    height: 1900vh;
+
 }
 
 .section02 {
     width: 100vw;
-    height: 200vh;
+    height: 100vh;
+    background-image: url("../img/img_arriere_plan/scene2_fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 0%;
 }
 
 .nuage-groupe {
-    left: 50vw;
-    top: 10vh;
+
     width: 40vw;
     aspect-ratio: 1/1;
 }
@@ -200,6 +249,15 @@ header a:hover {
     width: 40vw;
     min-width: 25vw;
 }
+
+#sec2-nuage {
+    width: 45vw;
+    height: 45vw;
+    right: 0;
+    top: 13vh;
+    
+}
+
 
 .lilo-assis {
     top: 5%;
@@ -218,18 +276,18 @@ header a:hover {
 }
 
 .poisson3 {
-    top: 185vh;
+    top: 25vh;
     left: 5vw;
 }
 
 .poisson1 {
-    top: 115vh;
-    right: 5vw;
+    top: 50vh;
+    right: -15vw;
     transform: scaleX(-1) scaleY(1);
 }
 
 .poisson4 {
-    top: 155vh;
+    top: 100%;
     left: 40vw;
     width: 25vw;
 }
@@ -237,23 +295,40 @@ header a:hover {
 .poisson2 {
     width: 70vw;
     bottom: 15vh;
+    bottom: 23%;
     left: -100%;
+}
+
+.sec2-phrase01 {
+    font-size: 3vw;
+    top: 20vh;
+    left: 2vw;
+    width: 50vw;
 }
 
 /* SECTION 3 */
 #section3 {
     width: 100vw;
-    height: 300vh;
+    height: 1000vh;
+}
+
+.section03 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
     background-image: url("../img/img_arriere_plan/scene3_fond.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 100% 100%;
+    background-position: 100% 0%;
+    overflow: hidden;
 }
+
 
 #sec3-nuage {
     width: 45vw;
     height: 45vw;
     left: 30vw;
+    top: 5vh;
 }
 
 #section3 .nuage-groupe {
@@ -267,25 +342,27 @@ header a:hover {
 }
 
 .crystal {
-    width: 10vw;
+    width: 14vw;
 }
 .crystal img{
     object-fit: contain;
 }
 
 .crystal01 {
-    top: 30vh;
-    left: 10vw;
+    top: 15vh;
+    left: -2vw;
+    rotate: 38deg;
 }
 
 .crystal02 {
-    top: 30vh;
-    right: 10vw;
+    top: 25vh;
+    right: -3vw;
+    rotate: -43deg;
 }
 
 .gros-crystal {
     left: 33vw;
-    top: 175vh;
+    top: 15vh;
     width: 30%;
     aspect-ratio: 1/1;
 }
@@ -316,10 +393,28 @@ z-index: 0;
 left: 33%;
 bottom: 5%;
 }
+
+.sec3-phrase01 {
+    position: absolute;
+    top: 60vh;
+    text-align: center;
+    left: 5vw;
+}
+
+.boom {
+    font-size: 10vw;
+    font-family: var(--Gorditas);
+    color: var(--vertfonce);
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+}
 /* SECTION 4 */
 #section4 {
     width: 100vw;
-    height: 300vh;
+    height: 400vh;
     background-image: url("../img/img_arriere_plan/scene4_fond_01.jpg");
     background-repeat: no-repeat;
     background-size: cover;

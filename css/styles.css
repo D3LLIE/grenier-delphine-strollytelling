@@ -309,7 +309,7 @@ header a:hover {
 /* SECTION 3 */
 #section3 {
     width: 100vw;
-    height: 1000vh;
+    height: 600vh;
 }
 
 .section03 {
@@ -336,7 +336,7 @@ header a:hover {
     
 }
 
-.lilo-mimi {
+.lilo-mimi, .calin {
     width: 30vw;
     left: 15%;
 }
@@ -414,19 +414,68 @@ bottom: 5%;
 /* SECTION 4 */
 #section4 {
     width: 100vw;
-    height: 400vh;
+    height: 200vh;
+
+}
+#section04 {
+    top: 100vh;
+    width: 100vw;
+    height: 100vh;
     background-image: url("../img/img_arriere_plan/scene4_fond_01.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 30% 0;
+    overflow: hidden;
 }
 
+
+.sec4-phrase01 {
+    top: 30vh;
+    left: 5vw;
+    width: 30%;
+}
+
+.sec4-phrase02 {
+    top: 30vh;
+    left: 55vw;
+}
+
+.sec4-phrase03 {
+    top: 10vh;
+    left: 5vw;
+    color: var(--rose);
+    font-family: var(--Gorditas);
+    font-size: 4vw;
+}
+
+.sec4-phrase04 {
+    border: red 2px solid;
+    top: 20vh;
+    left: 15vw;
+    color: var(--orange);
+    font-family: var(--Gorditas);
+    font-size: 4vw;
+}
+
+.sec4-phrase05 {
+    border: red 2px solid;
+    top: 10vh;
+    left: 70vw;
+    color: var(--vertlime);
+    font-family: var(--Gorditas);
+    font-size: 4vw;
+}
+
+.grotte-textes {
+    width: 100vw;
+    height: 100vh;
+}
 
 #section4-grotte {
     width: 100vw;
     height: 100vh;
-    top: 100vh;
+    left: 225vw;
     background-color: black;
+    box-shadow: 0px 0px 70px 70px black;
 }
 
 #sec4-nuage, #sec5-nuage {
@@ -449,26 +498,26 @@ bottom: 5%;
 }
 
 .yeux-chien {
-    top: 30%;
-    left: 15%;
+    top: 10vh;
+    left: 10vw;
     width: 19vw;
 }
 
 .yeux-chat {
-    top: 15%;
-    left: 10%;
+    top: 5vh;
+    left: 2vw;
     width: 13vw;
 }
 
 .yeux-oiseau {
-    top: 15%;
-    right: 10%;
+    top: 25vh;
+    right: 10vw;
     width: 13vw;
 }
 
 .spritesheet1 {
-    top: 210vh;
-    left: 30%;
+    top: 20vh;
+    left: 30vw;
     width: 40vw;
     aspect-ratio: 1/1;
     background-image: url("../img/img_personnages/spritesheet_kiwi.png");
@@ -488,7 +537,7 @@ bottom: 5%;
 /* SECTION 5 */
 #section5 {
     width: 100vw;
-    height: 300vh;
+    height: 200vh;
     background-color: var(--vertpale);
 }
 
@@ -527,58 +576,47 @@ body.is-scrolling .spritesheet2, body.is-scrolling .spritesheet1 {
 
 }
 
+.sec5-phrase01 {
+    left: 50vw;
+}
+
 /* SECTION 6 */
 #section6 {
     width: 100vw;
-    height: 200vh;
+    height: 300vh;
     background-image: url("../img/img_arriere_plan/scene6_fond.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 0;
 }
 
+#sec6-nuage {
+    top: 10vh;
+}
 
-
-.escaliers {
+.sec6-lilo img {
     width: 30vw;
-    height: 1/1;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
+    top: 33vh;
 }
-
-.escalier {
-    width: 80vw;
-    aspect-ratio: 1658/127;
-}
-
-.section6-01 {
+#section6-01, #section6-02 {
     width: 100vw;
     height: 100vh;
-    top: 100vh;
 }
 
-.escalier:nth-child(1) {
-    bottom: -4vh;
-    z-index: 5;
-    right: -65%;
-}
-.escalier:nth-child(2) {
-   bottom: 5vh;
-    z-index: 4;
-    right: -75%;
-}
-.escalier:nth-child(3) {
-    bottom: 15vh;
-    z-index: 3;
-    right: -85%;
-}
-.escalier:nth-child(4) {
-    bottom: 23vh;
-    z-index: 2;
-    right: -95%;
+#section6-01 {
+    top: 100vw;
 }
 
+#section6-02 {
+    top: 200vw;
+}
+
+.sec6-lilo{
+    width: 20vw;
+    height: 20vw;
+    left: 50vw;
+    top: 100%;
+}
 /* FOOTER */
 footer {
     background-color: #BF6F7E;

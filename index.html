@@ -67,8 +67,8 @@
                 <div id="sec2-nuage">
                     <div class="nuage-groupe">
                         <img class="nuage" src="./img/img_elements_visuels/nuage.png" alt="nuage">
-                        <img class="lilo-assis" src="./img/img_personnages/Lilo_assise.png" alt="chien assis">
-                        <img class="mitaine-peche" src="./img/img_personnages/Mimi_peche.png" alt="chat qui pêche">
+                        <img class="nuage assis" src="./img/img_personnages/Lilo_assise.png" alt="chien assis">
+                        <img class="nuage peche" src="./img/img_personnages/Mimi_peche.png" alt="chat qui pêche">
                     </div>
                 </div>
             <p class="textes sec2-phrase01">La tête dans les nuages, Lilo rencontra un chat appelé Mitaine.</p>
@@ -85,7 +85,7 @@
                 <li>opacity</li> 
                 <li>text</li>
                 <li>x & y</li>
-                <li>MotionPathPlugin</li>
+                <li>MotionPathPlugin (bientôt)</li>
                 <ul> 
                     <li>Motion Path sur le poisson</li> 
                 </ul> 
@@ -164,12 +164,13 @@
             <div class="spritesheet1"></div>
             </div>
         <ul class="technique-gsap"> 
-            <li>...</li> 
-            <li>...</li> 
-            <li>scrollTrigger 
+            <li>Opacity</li> 
+            <li>Texte</li> 
+            <li>x & y</li>
+            <li>backgroundPosition</li>
+            <li>scrollTrigger (bientôt) 
                 <ul> 
-                    <li>trigger=</li> 
-                    <li>...</li> 
+                    <li>trigger=#section4</li> 
                 </ul> 
             </li> 
         </ul>
@@ -181,7 +182,7 @@
                 <h3 class="chapitre" >CHAPITRE 5</h3>
                 <h4 class="sous-chapitre">le dernier chemin</h4>
             </div>
-            <div id="div-section5">
+            <div id="section05">
                 <div id="sec5-nuage">
                     <div class="nuage-groupe">
                         <img class="nuage" src="./img/img_elements_visuels/nuage.png" alt="nuage">
@@ -192,12 +193,10 @@
                 <div class="spritesheet2"></div>
             </div>
             <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
-                <li>scrollTrigger 
+                <li>Texte</li> 
+                <li>scrollTrigger (bientôt)
                     <ul> 
-                        <li>trigger=</li> 
-                        <li>...</li> 
+                        <li>trigger=#section5</li> 
                     </ul> 
                 </li> 
             </ul>
@@ -209,28 +208,63 @@
                 <h3 class="chapitre" >CHAPITRE 6</h3>
                 <h4 class="sous-chapitre">au revoir</h4>
             </div>
-            <div id="section6-01">
+            <div id="section06-01">
+                <p class="textes sec6-phrase01">Leur aventure arrivait à sa fin.</p>
                 <div id="sec6-nuage">
                     <div class="nuage-groupe">
                         <img class="nuage" src="./img/img_elements_visuels/nuage.png" alt="nuage">
                         <img class="lilo-mimi" src="./img/img_personnages/Lilo_Mimi_sur_dos.png" alt="chat sur dos d'un chien">
                         <img class="calin"src="./img/img_personnages/Lilo_Mimi_calin.png" alt="chat et chien calin">
+                        <img class="peche" src="./img/img_personnages/Mimi_peche.png" alt="chat peche">
                     </div>
                 </div>
+                <div class="groupe-svg">
+                    <svg class="svg" id="Calque_3" data-name="Calque 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 417.75 358.32">
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: #bf6f7e;
+                              stroke-width: 0px;
+                            }
+                          </style>
+                        </defs>
+                        <path class="cls-1" d="M.1,105.75C-2.72,36.8,56.81,2.06,97.1.75c43.64-1.43,61,5,112,56C252.73,4.32,291.73-1.68,320.73.32c40.22,2.77,98,36,97,105s-139,183-209,253C124.73,281.32,2.73,170.32.1,105.75Z"/>
+                      </svg>
+                      <svg class="svg" id="Calque_4" data-name="Calque 4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 472.75 473.39">
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: #bf6f7e;
+                              stroke-width: 0px;
+                            }
+                          </style>
+                        </defs>
+                        <path class="cls-1" d="M240.83,218.27c68.87-4.22,150,81,165,160s-1,87-25,94-77-21-105-26-62-11-113,14-99,12-98-35,36.36-127,71.68-160,55.32-44,104.32-47Z"/>
+                        <path class="cls-1" d="M368.83,207.27c-3.86,44.39,8.82,101.94,48,108s57.17-58.26,55.85-97.15c-1.39-40.96-8.85-96.85-48.85-96.85-33,0-53,63-55,86Z"/>
+                        <path class="cls-1" d="M253.02,86.16c-3.86,44.39,8.82,101.94,48,108s57.17-58.26,55.85-97.15c-1.39-40.96-9.03-93.09-48.85-96.85s-53,63-55,86Z"/>
+                        <path class="cls-1" d="M121.4,93.58c-.93,44.54,15.51,101.14,55,104.61s53.22-61.9,49.34-100.61c-4.08-40.78-15.22-96.27-55.11-93.43-43.8,3.12-48.74,66.35-49.23,89.43Z"/>
+                        <path class="cls-1" d="M.04,207.29c-.93,44.54,15.51,101.14,55,104.61,39.49,3.47,53.22-61.9,49.34-100.61-4.08-40.78-15.22-96.27-55.11-93.43C5.47,120.98.52,184.21.04,207.29Z"/>
+                      </svg>
+                </div>
                 <div class="sec6-lilo">
-                    <img src="./img/img_personnages/Lilo_gauche_triste.png" alt="chien triste">
-                    <img src="./img/img_personnages/Lilo_droite_heureuse.png" alt="chien heureux">
+                    <img class="lilo-triste" src="./img/img_personnages/Lilo_gauche_triste.png" alt="chien triste">
+                    <img class="lilo-heureuse" src="./img/img_personnages/Lilo_droite_heureuse.png" alt="chien heureux">
+                </div>
+                <img class="gazon" src="./img/img_arriere_plan/scene1_gazon.png" alt="gazon">
+            </div>
+            <div id="section06-02">
+                    <h3 class="chapitre fin" > FIN</h3>
+                    <img class="fin-image" src="./img/img_personnages/Lilo_gauche_heureuse.png" alt="chien heureux">
                 </div>
             </div>
-            <div id="section6-02">
 
-            </div>
             <ul class="technique-gsap"> 
-                <li>...</li> 
-                <li>...</li> 
-                <li>scrollTrigger 
+                <li>x & y</li> 
+                <li>Opacity</li> 
+                <li>Text</li> 
+                <li>scrollTrigger (bientôt)
                     <ul> 
-                        <li>trigger=</li> 
+                        <li>trigger=section6</li> 
                         <li>...</li> 
                     </ul> 
                 </li> 

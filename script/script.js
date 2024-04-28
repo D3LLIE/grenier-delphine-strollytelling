@@ -104,21 +104,23 @@ let chapitreTrois = gsap.timeline({
   chapitreTrois.fromTo(".crystal02", {x:'115%'}, {x:'0', duration: 0.5 }, '7')
   chapitreTrois.to(".crystal02", {y:'-150%', duration: 7, ease: 'none' }, '<-0.5')
   chapitreTrois.fromTo(".gros-crystal",{y:"175%"}, {y:"-2%", duration: 2, ease: 'none'}, '+=0.5')
-  chapitreTrois.to(".groupecrystal03",{x:"330%", y:"-60%", rotate:"20deg" ,duration:0.5 ,ease:'power1.out'}, '+=3')
+  chapitreTrois.to(".groupecrystal03",{x:"330%", y:"-60%", rotate:"20deg" ,duration:3 ,ease:'power1.out'}, '+=3')
   chapitreTrois.fromTo("#sec3-nuage",{opacity: 1}, {opacity: 0, duration: 0.5}, '<')
   chapitreTrois.fromTo(".boom",{scale: 1}, {scale: 5, yoyo:  true, duration: 4, repeat: 1}, '<')
   chapitreTrois.fromTo(".boom",{opacity: 0}, {opacity: 1, duration: 1}, '<')
-  chapitreTrois.to(".groupecrystal02",{x:"-320%", y:"-60%", rotate:"-50deg" ,duration:0.5 ,ease:'power1.out'},"<")
-  chapitreTrois.to(".groupecrystal01",{y:"100%",duration:0.5, rotate:"-20deg" ,ease:'power1.out'},"<")
-  chapitreTrois.to(".groupecrystal04",{y:"-100%",duration:0.5 ,ease:'power1.out'},'<')
-  chapitreTrois.to(".groupecrystal04",{y:"-100%",duration:0.5 ,ease:'power1.out'},'<')
+  chapitreTrois.to(".groupecrystal02",{x:"-320%", y:"-60%", rotate:"-50deg" ,duration:3 ,ease:'power1.out'},"<")
+  chapitreTrois.to(".groupecrystal01",{y:"100%",duration:3, rotate:"-20deg" ,ease:'power1.out'},"<")
+  chapitreTrois.to(".groupecrystal04",{y:"-100%",duration:3 ,ease:'power1.out'},'<')
+  chapitreTrois.to(".groupecrystal04",{y:"-100%",duration:3 ,ease:'power1.out'},'<')
   chapitreTrois.fromTo(".gros-crystal",{opacity: 1}, {opacity: 0, duration: 3})
 
 
 
 
-// Section Quatre
+// Section Quatre 
 let chapitreQuatre = gsap.timeline() ;
+chapitreQuatre.fromTo('#chapitre4 .chapitre', {opacity: 0}, {opacity: 2, duration:1})
+chapitreQuatre.fromTo('#chapitre4 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:1}, '<')
 chapitreQuatre.to(".sec4-phrase02", {text:"Une grotte immense se dressa devant elles, ne laissant pas de choix autre que d'y entrer.", ease:'none', duration: 1.3}, '4')
 chapitreQuatre.to(".sec4-phrase02", {opacity: 0, duration: 1}, '<4')
 chapitreQuatre.to("#sec4-nuage", {x: '100vw', duration: 10, ease: 'power1.in'})
@@ -158,9 +160,29 @@ chapitreQuatre.fromTo(".spritesheet1", {opacity:0} ,{opacity: 1},'<1')
 
 
 let chapitreCinq = gsap.timeline();
-  chapitreCinq.to(".sec5-phrase01", {text: "Il ne leur restait qu'un chemin à prendre, mais lequel..", duration: 2}, 3)
-  chapitreCinq.to(".sec5-phrase01", {text: '"Suivons cette enseigne", cria Lilo', duration: 2}, '<5')
+chapitreCinq.fromTo('#chapitre5 .chapitre', {opacity: 0}, {opacity: 2, duration:1})
+chapitreCinq.fromTo('#chapitre5 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:1}, '<')
+chapitreCinq.to(".sec5-phrase01", {text: "Il ne leur restait qu'un chemin à prendre, mais lequel..", duration: 2}, 3)
+chapitreCinq.to(".sec5-phrase01", {text: '"Suivons cette enseigne", cria Lilo', duration: 2}, '<5')
 
 
 // Section Six
 let chapitreSix = gsap.timeline();
+chapitreSix.fromTo('#chapitre5 .chapitre', {opacity: 0}, {opacity: 2, duration:1})
+chapitreSix.fromTo('#chapitre5 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:1}, '<')
+chapitreSix.to(".sec6-phrase01",{text:"Il ne leur restait qu'à se dire aurevoir", ease: 'none', duration: 3})
+chapitreSix.fromTo("#sec6-nuage .lilo-mimi",{opacity: 1}, {opacity: 0, duration: 2, yoyo: true, repeat: 1})
+chapitreSix.fromTo("#sec6-nuage .calin",{opacity: 0}, {opacity: 1, duration: 2, yoyo: true, repeat: 1}, '<')
+chapitreSix.to("#sec6-nuage",{y: '25vh', x: '2vw', duration: 3})
+chapitreSix.fromTo("#sec6-nuage .lilo-mimi",{opacity: 1}, {opacity: 0, duration: 2})
+chapitreSix.fromTo("#sec6-nuage .peche",{opacity: 0}, {opacity: 1, duration: 2}, '<')
+chapitreSix.fromTo(".lilo-triste",{opacity: 0}, {opacity: 1, duration: 2, yoyo: true, repeat: 1}, '<')
+chapitreSix.fromTo(".lilo-heureuse",{opacity: 0}, {opacity: 1, duration: 2})
+chapitreSix.to(".sec6-phrase01",{text:"Gardant en mémoire de fabuleux souvenirs", ease: 'none', duration: 3})
+chapitreSix.to(".lilo-heureuse",{y:"2vh", yoyo: true, repeat: 40, duration:0.5 ,ease:'none'})
+chapitreSix.to(".lilo-heureuse",{x:'100vw', duration: 10}, '<');
+
+
+
+
+

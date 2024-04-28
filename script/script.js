@@ -1,12 +1,19 @@
-//Bibliotheques gratuites
+/*---------------------------------------------------------- 
+# GSAP Bibliothèque gratuites
+----------------------------------------------------------*/ 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(MotionPathPlugin);
 
-//Bibliotheques Payantes
+/*---------------------------------------------------------- 
+# GSAP Bibliothèque payantes
+----------------------------------------------------------*/ 
 
 
-// Generales
+
+/*---------------------------------------------------------- 
+# Styles Généraux 
+----------------------------------------------------------*/ 
 const action = document.querySelector(".appel-action svg");
 const sprite2 = document.querySelector(".spritesheet2");
 const body = document.querySelector("body");
@@ -24,7 +31,10 @@ window.addEventListener('scroll', function() {
 
 gsap.to(".nuage-groupe",{y:"-5%", yoyo: true, repeat: -1, ease: 'power1.inOut', duration: 0.5})
 
-// Section 1
+
+/*---------------------------------------------------------- 
+# Chapitre 1
+----------------------------------------------------------*/ 
 let chapitreUn = gsap.timeline({
   scrollTrigger: {
     pin: true,
@@ -52,6 +62,10 @@ let chapitreUn = gsap.timeline({
   chapitreUn.to("#sec1-lilo2",{y:"200%",duration:5 ,ease:'none'})
   chapitreUn.to("#sec1-lilo2",{opacity: "0", duration: 3});
 
+
+/*---------------------------------------------------------- 
+# Chapitre 2
+----------------------------------------------------------*/ 
 let chapitreDeux = gsap.timeline({
   scrollTrigger: {
     pin: true,
@@ -78,7 +92,9 @@ chapitreDeux.fromTo('.poisson1', {x: '100%'}, {x: '-780%', duration: 8})
 chapitreDeux.fromTo('.poisson3', {x: '-150%'}, {x: '700%', duration: 10}, '<0.5')
 
 
-// Section Trois
+/*---------------------------------------------------------- 
+# Chapitre 3
+----------------------------------------------------------*/ 
 let chapitreTrois = gsap.timeline({
   scrollTrigger: {
     pin: true,
@@ -115,9 +131,9 @@ let chapitreTrois = gsap.timeline({
   chapitreTrois.fromTo(".gros-crystal",{opacity: 1}, {opacity: 0, duration: 3})
 
 
-
-
-// Section Quatre 
+/*---------------------------------------------------------- 
+# Chapitre 4
+----------------------------------------------------------*/ 
 let chapitreQuatre = gsap.timeline() ;
 chapitreQuatre.fromTo('#chapitre4 .chapitre', {opacity: 0}, {opacity: 2, duration:1})
 chapitreQuatre.fromTo('#chapitre4 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:1}, '<')
@@ -159,6 +175,9 @@ chapitreQuatre.to("#section4-grotte", {x: '-425vw', duration: 5},'<')
 chapitreQuatre.fromTo(".spritesheet1", {opacity:0} ,{opacity: 1},'<1')
 
 
+/*---------------------------------------------------------- 
+# Chapitre 5
+----------------------------------------------------------*/ 
 let chapitreCinq = gsap.timeline();
 chapitreCinq.fromTo('#chapitre5 .chapitre', {opacity: 0}, {opacity: 2, duration:1})
 chapitreCinq.fromTo('#chapitre5 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:1}, '<')
@@ -166,7 +185,9 @@ chapitreCinq.to(".sec5-phrase01", {text: "Il ne leur restait qu'un chemin à pre
 chapitreCinq.to(".sec5-phrase01", {text: '"Suivons cette enseigne", cria Lilo', duration: 2}, '<5')
 
 
-// Section Six
+/*---------------------------------------------------------- 
+# Chapitre 6
+----------------------------------------------------------*/ 
 let chapitreSix = gsap.timeline();
 chapitreSix.fromTo('#chapitre5 .chapitre', {opacity: 0}, {opacity: 2, duration:1})
 chapitreSix.fromTo('#chapitre5 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:1}, '<')

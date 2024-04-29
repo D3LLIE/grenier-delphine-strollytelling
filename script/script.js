@@ -8,7 +8,7 @@ gsap.registerPlugin(MotionPathPlugin);
 /*---------------------------------------------------------- 
 # GSAP Bibliothèques payantes
 ----------------------------------------------------------*/ 
-
+gsap.registerPlugin(MorphSVGPlugin); 
 
 /*---------------------------------------------------------- 
 # Styles Généraux 
@@ -62,20 +62,7 @@ let chapitreUn = gsap.timeline({
   chapitreUn.to("#sec1-lilo2",{y:"200%",duration:5 ,ease:'none'})
   chapitreUn.to("#sec1-lilo2",{opacity: "0", duration: 3});
 
-/*let layer = document.querySelectorAll(".layer");
-  layer.forEach((section) => {
-    let innerHeight = document.body.scrollHeight;
-  let vitesse = section.getAttribute("data-vitesse");
-    console.log(vitesse)
-    
-  gsap.to(layer, {
-        backgroundPosition: `${-innerHeight / vitesse}px 100%`,
-        ease: "none",
-        scrollTrigger: {
-          scrub: true,
-        }
-      });
-  })*/
+
 /*---------------------------------------------------------- 
 # Chapitre 2
 ----------------------------------------------------------*/ 
@@ -178,8 +165,6 @@ let chapitreQuatre = gsap.timeline({
 });
 chapitreQuatre.fromTo('#chapitre4 .chapitre', {opacity: 0}, {opacity: 2, duration:1}, 1)
 chapitreQuatre.fromTo('#chapitre4 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:1}, '<')
-chapitreQuatre.to("#chapitre4",{y: '-100vh', duration: 5})
-chapitreQuatre.to("#section04",{y: '-100vh', duration: 5}, '<')
 chapitreQuatre.to("#sec4-nuage", {x: '100vw', duration: 10, ease: 'power1.in'})
 chapitreQuatre.to(".sec4-phrase02", {text:"Une grotte immense se dressa devant elles, ne laissant pas de choix autre que d'y entrer.", ease:'none', duration: 1.3})
 chapitreQuatre.to(".sec4-phrase02", {opacity: 0, duration: 1}, '<4')
@@ -237,21 +222,22 @@ chapitreSix.fromTo('#chapitre5 .sous-chapitre', {opacity: 0}, {opacity: 1, durat
 chapitreSix.to(".sec6-phrase01",{text:"Il ne leur restait qu'à se dire aurevoir", ease: 'none', duration: 3})
 chapitreSix.fromTo("#sec6-nuage .lilo-mimi",{opacity: 1}, {opacity: 0, duration: 2, yoyo: true, repeat: 1})
 chapitreSix.fromTo("#sec6-nuage .calin",{opacity: 0}, {opacity: 1, duration: 2, yoyo: true, repeat: 1}, '<')
+chapitreSix.to("#svg1", {
+  duration: 3, 
+  morphSVG:{
+    shape:"#svg2", 
+    shapeIndex:2
+  }
+});
 chapitreSix.to("#sec6-nuage",{y: '25vh', x: '2vw', duration: 3})
 chapitreSix.fromTo("#sec6-nuage .lilo-mimi",{opacity: 1}, {opacity: 0, duration: 2})
 chapitreSix.fromTo("#sec6-nuage .peche",{opacity: 0}, {opacity: 1, duration: 2}, '<')
 chapitreSix.fromTo(".lilo-triste",{opacity: 0}, {opacity: 1, duration: 2, yoyo: true, repeat: 1}, '<')
 chapitreSix.fromTo(".lilo-heureuse",{opacity: 0}, {opacity: 1, duration: 2})
+
 chapitreSix.to(".sec6-phrase01",{text:"Gardant en mémoire de fabuleux souvenirs", ease: 'none', duration: 3})
 chapitreSix.to(".lilo-heureuse",{y:"2vh", yoyo: true, repeat: 40, duration:0.5 ,ease:'none'})
 chapitreSix.to(".lilo-heureuse",{x:'100vw', duration: 10}, '<');
 
 
-gsap.registerPlugin(MorphSVGPlugin);
-gsap.to("#svg1", {
-  duration: 3, 
-  morphSVG:{
-    shape:"#svg2", 
-    shapeIndex:5
-  }
-});
+

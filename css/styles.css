@@ -668,9 +668,6 @@ body.is-scrolling .spritesheet2, body.is-scrolling .spritesheet1 {
     position: absolute;
 }
 
-.doigts{
-    display: none;
-}
 
 .fin-image {
     width: 60vw;

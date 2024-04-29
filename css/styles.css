@@ -131,7 +131,7 @@ header a:hover {
 ---------------------------------------------------------*/ 
 #section1 {
     width: 100vw;
-    height: 900vh;
+    height: 600vh;
     object-fit: cover;
     object-position: 100% 100%;
 }
@@ -425,7 +425,7 @@ bottom: 5vh;
 ---------------------------------------------------------*/ 
 #section4 {
     width: 100vw;
-    height: 200vh;
+    height: 900vh;
 
 }
 #section04 {
@@ -459,7 +459,6 @@ bottom: 5vh;
 }
 
 .sec4-phrase04 {
-    border: red 2px solid;
     top: 20vh;
     left: 15vw;
     color: var(--orange);
@@ -468,7 +467,6 @@ bottom: 5vh;
 }
 
 .sec4-phrase05 {
-    border: red 2px solid;
     top: 10vh;
     left: 70vw;
     color: var(--vertlime);
@@ -659,11 +657,19 @@ body.is-scrolling .spritesheet2, body.is-scrolling .spritesheet1 {
     width: 7vw;
     aspect-ratio: 1/1;
     top: 5vh;
-    display: none; /* EN DISPLAY NONE JUSQU'À AJOUT DE L'ANIMATION SVG */
+
+}
+
+#svg2 {
+    visibility:hidden;
 }
 
 .svg {
     position: absolute;
+}
+
+.doigts{
+    display: none;
 }
 
 .fin-image {

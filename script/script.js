@@ -1,14 +1,13 @@
 /*---------------------------------------------------------- 
-# GSAP Bibliothèque gratuites
+# GSAP Bibliothèques gratuites
 ----------------------------------------------------------*/ 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(MotionPathPlugin);
 
 /*---------------------------------------------------------- 
-# GSAP Bibliothèque payantes
+# GSAP Bibliothèques payantes
 ----------------------------------------------------------*/ 
-
 
 
 /*---------------------------------------------------------- 
@@ -21,6 +20,7 @@ let monMinuteur;
 
 gsap.to(action, { y: "10px", duration: 0.5, repeat: -1, ease: "power2.in", yoyo: "true", fill: "#a04959"});
 
+
 window.addEventListener('scroll', function() {
     body.classList.add("is-scrolling");
     clearTimeout(monMinuteur);
@@ -29,8 +29,8 @@ window.addEventListener('scroll', function() {
        }, 100); 
   });
 
-gsap.to(".nuage-groupe",{y:"-5%", yoyo: true, repeat: -1, ease: 'power1.inOut', duration: 0.5})
-
+let nuage = gsap.to(".nuage-groupe",{y:"-5%", yoyo: true, repeat: -1, ease: 'power1.inOut', duration: 0.5})
+nuage.pause();
 
 /*---------------------------------------------------------- 
 # Chapitre 1
@@ -47,9 +47,9 @@ let chapitreUn = gsap.timeline({
 });
   chapitreUn.to(".para00",{backgroundPosition:"100% 100%",duration:18,ease:'none'},'<')
   chapitreUn.to(".para03",{y:"2%", yoyo: true, repeat: 40, duration:0.5 ,ease:'none'},'<')
-  chapitreUn.to(".para01",{backgroundPosition:"100% 100%",duration:16,ease:'none'},'<')
-  chapitreUn.to(".para04",{backgroundPosition:"100% 100%",duration:14,ease:'none'},'<')
-  chapitreUn.to(".para05",{backgroundPosition:"100% 100%",duration:12,ease:'none'},'<')
+  chapitreUn.to(".para01",{backgroundPosition:"60% 90%",duration:18,ease:'none'},'<')
+  chapitreUn.to(".para04",{backgroundPosition:"80% 100%",duration:18,ease:'none'},'<')
+  chapitreUn.to(".para05",{backgroundPosition:"90% 85%",duration:18,ease:'none'},'<')
   chapitreUn.to(".para03",{x:"70%",duration:10 ,ease:'none'}, 12)
   chapitreUn.to(".para03",{opacity: "0", duration: 3})
   chapitreUn.fromTo("#chapitre1", {opacity: 0}, {opacity: 1, duration: 0.5}, 1)
@@ -62,7 +62,20 @@ let chapitreUn = gsap.timeline({
   chapitreUn.to("#sec1-lilo2",{y:"200%",duration:5 ,ease:'none'})
   chapitreUn.to("#sec1-lilo2",{opacity: "0", duration: 3});
 
-
+/*let layer = document.querySelectorAll(".layer");
+  layer.forEach((section) => {
+    let innerHeight = document.body.scrollHeight;
+  let vitesse = section.getAttribute("data-vitesse");
+    console.log(vitesse)
+    
+  gsap.to(layer, {
+        backgroundPosition: `${-innerHeight / vitesse}px 100%`,
+        ease: "none",
+        scrollTrigger: {
+          scrub: true,
+        }
+      });
+  })*/
 /*---------------------------------------------------------- 
 # Chapitre 2
 ----------------------------------------------------------*/ 
@@ -74,6 +87,12 @@ let chapitreDeux = gsap.timeline({
     start: 'top 0%',
     end: 'bottom 75%',
     trigger: '#section2',
+    onEnter: () => {
+      nuage.play(0);
+    },
+    onLeave: () => {
+      nuage.pause();
+    },
   },
 })
 chapitreDeux.fromTo('#chapitre2 .chapitre', {opacity: 0}, {opacity: 2, duration:1})
@@ -104,10 +123,16 @@ let chapitreTrois = gsap.timeline({
     start: 'top 0%',
     end: 'bottom 75%',
     trigger: '#section3',
+    onEnter: () => {
+      nuage.play(0);
+    },
+    onLeave: () => {
+      nuage.pause();
+    },
   },
 });
-  chapitreTrois.fromTo('#chapitre3 .chapitre', {opacity: 0}, {opacity: 2, duration:1})
-  chapitreTrois.fromTo('#chapitre3 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:1}, '<')
+  chapitreTrois.fromTo('#chapitre3 .chapitre', {opacity: 0}, {opacity: 2, duration:4})
+  chapitreTrois.fromTo('#chapitre3 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:4}, '<')
   chapitreTrois.to("#chapitre3",{y: '-100vh', duration: 5})
   chapitreTrois.to(".section03",{y: '-100vh', duration: 5}, '<')
   chapitreTrois.to(".section03",{backgroundPosition:"100% 100%",duration:18,ease:'none'})
@@ -134,12 +159,30 @@ let chapitreTrois = gsap.timeline({
 /*---------------------------------------------------------- 
 # Chapitre 4
 ----------------------------------------------------------*/ 
-let chapitreQuatre = gsap.timeline() ;
-chapitreQuatre.fromTo('#chapitre4 .chapitre', {opacity: 0}, {opacity: 2, duration:1})
+let chapitreQuatre = gsap.timeline({
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: false,
+    scrub: true,
+    marker: true,
+    start: 'top 0%',
+    end: 'bottom 75%',
+    trigger: '#section4',
+    onEnter: () => {
+      nuage.play(0);
+    },
+    onLeave: () => {
+      nuage.pause();
+    },
+  },
+});
+chapitreQuatre.fromTo('#chapitre4 .chapitre', {opacity: 0}, {opacity: 2, duration:1}, 1)
 chapitreQuatre.fromTo('#chapitre4 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:1}, '<')
-chapitreQuatre.to(".sec4-phrase02", {text:"Une grotte immense se dressa devant elles, ne laissant pas de choix autre que d'y entrer.", ease:'none', duration: 1.3}, '4')
-chapitreQuatre.to(".sec4-phrase02", {opacity: 0, duration: 1}, '<4')
+chapitreQuatre.to("#chapitre4",{y: '-100vh', duration: 5})
+chapitreQuatre.to("#section04",{y: '-100vh', duration: 5}, '<')
 chapitreQuatre.to("#sec4-nuage", {x: '100vw', duration: 10, ease: 'power1.in'})
+chapitreQuatre.to(".sec4-phrase02", {text:"Une grotte immense se dressa devant elles, ne laissant pas de choix autre que d'y entrer.", ease:'none', duration: 1.3})
+chapitreQuatre.to(".sec4-phrase02", {opacity: 0, duration: 1}, '<4')
 chapitreQuatre.fromTo(".sec4-phrase01", {opacity: 0}, {opacity: 1, duration: 1}, '<4')
 chapitreQuatre.to(".sec4-phrase01", {opacity: 0, duration: 1}, '<6')
 chapitreQuatre.to("#section4-grotte", {x: '-225vw', duration: 3}, '-=2')
@@ -204,6 +247,11 @@ chapitreSix.to(".lilo-heureuse",{y:"2vh", yoyo: true, repeat: 40, duration:0.5 ,
 chapitreSix.to(".lilo-heureuse",{x:'100vw', duration: 10}, '<');
 
 
-
-
-
+gsap.registerPlugin(MorphSVGPlugin);
+gsap.to("#svg1", {
+  duration: 3, 
+  morphSVG:{
+    shape:"#svg2", 
+    shapeIndex:5
+  }
+});

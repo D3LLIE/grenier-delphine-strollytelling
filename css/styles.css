@@ -270,6 +270,25 @@ header a:hover {
     top: 10vh;
 }
 
+#peche-poisson {
+    width: 50vw;
+    height: 225vh;
+    border: 2px red solid;
+    left: 41vw;
+    top: 15vh;
+}
+
+
+#ligne {
+    width: 30;
+    fill: none;
+    stroke: var(--vertfonce);
+    position: absolute;
+
+}
+
+
+
 .assis {
     top: 10vh;
     width: 25vw;
@@ -298,8 +317,8 @@ header a:hover {
 }
 
 .poisson4 {
-    top: 100vh;
-    left: 40vw;
+    bottom: 0vh;
+    left: 6vw;
     width: 25vw;
 }
 

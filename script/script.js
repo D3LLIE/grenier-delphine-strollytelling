@@ -8,7 +8,9 @@ gsap.registerPlugin(MotionPathPlugin);
 /*---------------------------------------------------------- 
 # GSAP Bibliothèques payantes
 ----------------------------------------------------------*/ 
-gsap.registerPlugin(MorphSVGPlugin); 
+gsap.registerPlugin(MorphSVGPlugin);
+gsap.registerPlugin(DrawSVGPlugin);
+
 
 /*---------------------------------------------------------- 
 # Styles Généraux 
@@ -87,15 +89,45 @@ chapitreDeux.fromTo('#chapitre2 .sous-chapitre', {opacity: 0}, {opacity: 1, dura
 chapitreDeux.to(".poisson2",{x:"400%",duration:8 ,ease:'none'}, '-=1.5')
 chapitreDeux.to("#chapitre2",{y: '-100vh', duration: 5})
 chapitreDeux.to(".section02",{y: '-100vh', duration: 5}, '<')
-chapitreDeux.to(".section02",{backgroundPosition:"100% 100%",duration:20,ease:'none'})
+chapitreDeux.to(".section02",{backgroundPosition:"100% 100%",duration:30,ease:'none'})
 chapitreDeux.to(".sec2-phrase01",{text:"Lilo demanda à Mitaine si elle pouvait bien l'aider à retourner chez elle.", ease:'none', duration: 1.3}, '<+=3')
 chapitreDeux.to(".sec2-phrase01",{text:"Mitaine, d'un air moqueur, accepta selon une condition.", ease:'none', duration: 1.3}, '<+=3')
 chapitreDeux.to(".sec2-phrase01",{text:"Lilo sauta sur l'occasion, sans même écouter la condition de Mitaine... qui attrapa un poisson à ce même moment.", ease:'none', duration: 1.3}, '<+=3')
 chapitreDeux.fromTo(".sec2-phrase01",{opacity: 1}, {opacity: 0, duration: 3}, '<3')
 chapitreDeux.to(".sec2-phrase01",{y: '-100vh', duration: 5}, '<0.5')
 chapitreDeux.to('#sec2-nuage', {y: '-200vh', duration: 5}, '<0.5')
+chapitreDeux.to('#peche-poisson', {y: '-175vh', duration: 5}, '<')
 chapitreDeux.fromTo('.poisson1', {x: '100%'}, {x: '-780%', duration: 8})
 chapitreDeux.fromTo('.poisson3', {x: '-150%'}, {x: '700%', duration: 10}, '<0.5')
+chapitreDeux.fromTo(
+  ".ligne-peche",
+  { drawSVG: "0% 0%" },
+  {
+    drawSVG: "0% 100%",
+    duration: 10,
+    ease: "power1.inOut"
+  }
+),'5';
+chapitreDeux.to(".poisson4", {
+  duration: 10, 
+  yoyo: true,
+  ease: "power1.inOut",
+  motionPath:{
+    path: ".ligne-peche",
+    align: ".ligne-peche",
+    autoRotate: true,
+    alignOrigin: [0.5, 0.5]
+  }
+});
+chapitreDeux.to(
+  ".ligne-peche",
+  {
+    drawSVG: "0% 0%",
+    duration: 10,
+    ease: "power1.inOut"
+  }
+),'5';
+
 
 
 /*---------------------------------------------------------- 
@@ -229,6 +261,7 @@ chapitreSix.to("#svg1", {
     shapeIndex:2
   }
 });
+chapitreSix.fromTo('.doigt', {opacity: 0}, {opacity: 1, stagger: 0.2})
 chapitreSix.to("#sec6-nuage",{y: '25vh', x: '2vw', duration: 3})
 chapitreSix.fromTo("#sec6-nuage .lilo-mimi",{opacity: 1}, {opacity: 0, duration: 2})
 chapitreSix.fromTo("#sec6-nuage .peche",{opacity: 0}, {opacity: 1, duration: 2}, '<')

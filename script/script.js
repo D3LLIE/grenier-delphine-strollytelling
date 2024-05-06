@@ -96,9 +96,7 @@ chapitreDeux.to(".sec2-phrase01",{text:"Lilo sauta sur l'occasion, sans même é
 chapitreDeux.fromTo(".sec2-phrase01",{opacity: 1}, {opacity: 0, duration: 3}, '<3')
 chapitreDeux.to(".sec2-phrase01",{y: '-100vh', duration: 5}, '<0.5')
 chapitreDeux.to('#sec2-nuage', {y: '-200vh', duration: 5}, '<0.5')
-chapitreDeux.to('#peche-poisson', {y: '-175vh', duration: 5}, '<')
-chapitreDeux.fromTo('.poisson1', {x: '100%'}, {x: '-780%', duration: 8})
-chapitreDeux.fromTo('.poisson3', {x: '-150%'}, {x: '700%', duration: 10}, '<0.5')
+chapitreDeux.to('#peche-poisson', {y: '-205vh', duration: 5}, '<-4')
 chapitreDeux.fromTo(
   ".ligne-peche",
   { drawSVG: "0% 0%" },
@@ -108,17 +106,8 @@ chapitreDeux.fromTo(
     ease: "power1.inOut"
   }
 ),'5';
-chapitreDeux.to(".poisson4", {
-  duration: 10, 
-  yoyo: true,
-  ease: "power1.inOut",
-  motionPath:{
-    path: ".ligne-peche",
-    align: ".ligne-peche",
-    autoRotate: true,
-    alignOrigin: [0.5, 0.5]
-  }
-});
+chapitreDeux.fromTo('.poisson1', {x: '100%'}, {x: '-780%', duration: 8})
+chapitreDeux.fromTo('.poisson3', {x: '-150%'}, {x: '700%', duration: 10}, '<0.5')
 chapitreDeux.to(
   ".ligne-peche",
   {
@@ -126,7 +115,20 @@ chapitreDeux.to(
     duration: 10,
     ease: "power1.inOut"
   }
-),'5';
+),'2';
+chapitreDeux.fromTo(".poisson4", {opacity: 0}, {opacity:1, duration: 2},"<-0.5")
+chapitreDeux.to(".poisson4", {
+  duration: 10, 
+  ease: "power1.inOut",
+  rotate: "180deg",
+  motionPath:{
+    path: ".ligne-peche",
+    align: ".ligne-peche",
+    alignOrigin: [0, 0],
+    start: 1,
+    end: 0
+  }
+},"<");
 
 
 
@@ -138,7 +140,6 @@ let chapitreTrois = gsap.timeline({
     pin: true,
     pinSpacing: false,
     scrub: true,
-    marker: true,
     start: 'top 0%',
     end: 'bottom 75%',
     trigger: '#section3',
@@ -152,6 +153,7 @@ let chapitreTrois = gsap.timeline({
 });
   chapitreTrois.fromTo('#chapitre3 .chapitre', {opacity: 0}, {opacity: 2, duration:4})
   chapitreTrois.fromTo('#chapitre3 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:4}, '<')
+  chapitreTrois.to('#chapitre3', {duration: 10})
   chapitreTrois.to("#chapitre3",{y: '-100vh', duration: 5})
   chapitreTrois.to(".section03",{y: '-100vh', duration: 5}, '<')
   chapitreTrois.to(".section03",{backgroundPosition:"100% 100%",duration:18,ease:'none'})
@@ -183,9 +185,9 @@ let chapitreQuatre = gsap.timeline({
     pin: true,
     pinSpacing: false,
     scrub: true,
-    marker: true,
     start: 'top 0%',
     end: 'bottom 75%',
+    markers: true,
     trigger: '#section4',
     onEnter: () => {
       nuage.play(0);
@@ -195,15 +197,17 @@ let chapitreQuatre = gsap.timeline({
     },
   },
 });
-chapitreQuatre.fromTo('#chapitre4 .chapitre', {opacity: 0}, {opacity: 2, duration:1}, 1)
+chapitreQuatre.fromTo('#chapitre4 .chapitre', {opacity: 0}, {opacity: 2, duration:10}, 1)
 chapitreQuatre.fromTo('#chapitre4 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:1}, '<')
+chapitreQuatre.to('#chapitre4', {duration: 10})
+chapitreQuatre.to("#chapitre4",{y: '-100vh', duration: 5})
+chapitreQuatre.to("#section04",{y: '-100vh', duration: 5}, '<')
 chapitreQuatre.to("#sec4-nuage", {x: '100vw', duration: 10, ease: 'power1.in'})
 chapitreQuatre.to(".sec4-phrase02", {text:"Une grotte immense se dressa devant elles, ne laissant pas de choix autre que d'y entrer.", ease:'none', duration: 1.3})
-chapitreQuatre.to(".sec4-phrase02", {opacity: 0, duration: 1}, '<4')
-chapitreQuatre.fromTo(".sec4-phrase01", {opacity: 0}, {opacity: 1, duration: 1}, '<4')
-chapitreQuatre.to(".sec4-phrase01", {opacity: 0, duration: 1}, '<6')
-chapitreQuatre.to("#section4-grotte", {x: '-225vw', duration: 3}, '-=2')
-chapitreQuatre.to(".grotte-groupe", {y:"-5%", yoyo: 'true', repeat: -1, ease: 'power1.inOut', duration: 0.5})
+chapitreQuatre.to(".sec4-phrase02", {opacity: 0, duration: 1}, '<2')
+chapitreQuatre.fromTo(".sec4-phrase01", {opacity: 0}, {opacity: 1, duration: 1}, '<2')
+chapitreQuatre.to(".sec4-phrase01", {opacity: 0, duration: 1}, '<2')
+chapitreQuatre.to("#section4-grotte", {x: '-225vw', duration: 20})
 chapitreQuatre.fromTo(".grotte-groupe", {opacity: 0}, {opacity: 1, duration: 2})
 chapitreQuatre.fromTo(".sec4-phrase04",{opacity: 0},{opacity: 1, duration: 1}, '<1')
 chapitreQuatre.to(".sec4-phrase04", {opacity: 0, duration: 2}, '<1')
@@ -212,10 +216,10 @@ chapitreQuatre.fromTo(".sec4-phrase03",{opacity: 0},{opacity: 1, duration: 1}, '
 chapitreQuatre.to(".sec4-phrase03", {opacity: 0, duration: 2}, '<1')
 chapitreQuatre.to(".sec4-phrase04", {text: "T'as entendu ce bruit?", duration: 0},'<')
 chapitreQuatre.fromTo(".yeux-oiseau", {opacity: 0}, {opacity: 1, duration: 1},'<')
+chapitreQuatre.to(".sec4-phrase04", {opacity: 0, duration: 2}, '<1')
 chapitreQuatre.fromTo(".sec4-phrase05",{opacity: 0},{opacity: 1, duration: 1}, '<1')
 chapitreQuatre.to(".sec4-phrase05", {opacity: 0, duration: 2}, '<1')
 chapitreQuatre.fromTo(".sec4-phrase04",{opacity: 0},{opacity: 1, duration: 1}, '<1')
-chapitreQuatre.to(".sec4-phrase04", {opacity: 0, duration: 2}, '<1')
 chapitreQuatre.to(".sec4-phrase03", {text: "Ce n'était pas toi..", duration: 0},'<')
 chapitreQuatre.fromTo(".sec4-phrase03",{opacity: 0},{opacity: 1, duration: 1}, '<1')
 chapitreQuatre.to(".sec4-phrase03", {opacity: 0, duration: 2}, '<1')
@@ -238,19 +242,60 @@ chapitreQuatre.fromTo(".spritesheet1", {opacity:0} ,{opacity: 1},'<1')
 /*---------------------------------------------------------- 
 # Chapitre 5
 ----------------------------------------------------------*/ 
-let chapitreCinq = gsap.timeline();
+let chapitreCinq = gsap.timeline(
+  {
+    scrollTrigger: {
+      pin: true,
+      pinSpacing: false,
+      scrub: true,
+      marker: true,
+      start: 'top 0%',
+      end: 'bottom 75%',
+      trigger: '#section5',
+      onEnter: () => {
+        nuage.play(0);
+      },
+      onLeave: () => {
+        nuage.pause();
+      },
+    },
+  }
+);
 chapitreCinq.fromTo('#chapitre5 .chapitre', {opacity: 0}, {opacity: 2, duration:1})
 chapitreCinq.fromTo('#chapitre5 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:1}, '<')
-chapitreCinq.to(".sec5-phrase01", {text: "Il ne leur restait qu'un chemin à prendre, mais lequel..", duration: 2}, 3)
+chapitreCinq.to('#chapitre5', {duration: 10})
+chapitreCinq.to("#chapitre5",{y: '-100vh', duration: 5})
+chapitreCinq.to("#section05",{y: '-100vh', duration: 5}, '<')
+chapitreCinq.to(".sec5-phrase01", {text: "Il ne leur restait qu'un chemin à prendre, mais lequel..", duration: 2})
+chapitreCinq.fromTo(".spritesheet2", {opacity:0}, {opacity:1, duration:5 })
 chapitreCinq.to(".sec5-phrase01", {text: '"Suivons cette enseigne", cria Lilo', duration: 2}, '<5')
 
 
 /*---------------------------------------------------------- 
 # Chapitre 6
 ----------------------------------------------------------*/ 
-let chapitreSix = gsap.timeline();
-chapitreSix.fromTo('#chapitre5 .chapitre', {opacity: 0}, {opacity: 2, duration:1})
-chapitreSix.fromTo('#chapitre5 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:1}, '<')
+let chapitreSix = gsap.timeline({
+  scrollTrigger: {
+    pin: true,
+    pinSpacing: false,
+    scrub: true,
+    start: 'top 0%',
+    end: 'bottom 75%',
+    markers: true,
+    trigger: '#section6',
+    onEnter: () => {
+      nuage.play(0);
+    },
+    onLeave: () => {
+      nuage.pause();
+    },
+  },
+});
+chapitreSix.fromTo('#chapitre6 .chapitre', {opacity: 0}, {opacity: 2, duration:1})
+chapitreSix.fromTo('#chapitre6 .sous-chapitre', {opacity: 0}, {opacity: 1, duration:1}, '<')
+chapitreSix.to('#chapitre6', {duration: 10})
+chapitreSix.to("#chapitre6",{y: '-100vh', duration: 5},'2')
+chapitreSix.to("#section06-01",{y: '-100vh', duration: 5}, '<')
 chapitreSix.to(".sec6-phrase01",{text:"Il ne leur restait qu'à se dire aurevoir", ease: 'none', duration: 3})
 chapitreSix.fromTo("#sec6-nuage .lilo-mimi",{opacity: 1}, {opacity: 0, duration: 2, yoyo: true, repeat: 1})
 chapitreSix.fromTo("#sec6-nuage .calin",{opacity: 0}, {opacity: 1, duration: 2, yoyo: true, repeat: 1}, '<')
@@ -261,16 +306,19 @@ chapitreSix.to("#svg1", {
     shapeIndex:2
   }
 });
-chapitreSix.fromTo('.doigt', {opacity: 0}, {opacity: 1, stagger: 0.2})
+chapitreSix.fromTo('.doigt', {opacity: 0}, {opacity: 1, stagger: 0.5})
+chapitreSix.fromTo('#svg1, .doigt', {opacity: 1}, {opacity: 0, duration:3}, "<4")
 chapitreSix.to("#sec6-nuage",{y: '25vh', x: '2vw', duration: 3})
 chapitreSix.fromTo("#sec6-nuage .lilo-mimi",{opacity: 1}, {opacity: 0, duration: 2})
 chapitreSix.fromTo("#sec6-nuage .peche",{opacity: 0}, {opacity: 1, duration: 2}, '<')
 chapitreSix.fromTo(".lilo-triste",{opacity: 0}, {opacity: 1, duration: 2, yoyo: true, repeat: 1}, '<')
 chapitreSix.fromTo(".lilo-heureuse",{opacity: 0}, {opacity: 1, duration: 2})
-
 chapitreSix.to(".sec6-phrase01",{text:"Gardant en mémoire de fabuleux souvenirs", ease: 'none', duration: 3})
 chapitreSix.to(".lilo-heureuse",{y:"2vh", yoyo: true, repeat: 40, duration:0.5 ,ease:'none'})
-chapitreSix.to(".lilo-heureuse",{x:'100vw', duration: 10}, '<');
+chapitreSix.to(".lilo-heureuse",{x:'75vw', duration: 5}, '<');
+chapitreSix.to("#section06-01",{y: '-200vh', duration: 5},'<3')
+chapitreSix.to("#section06-02",{y: '-200vh', duration: 5}, '<')
+
 
 
 

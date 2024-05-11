@@ -96,7 +96,7 @@ chapitreDeux.to(".sec2-phrase01",{text:"Lilo sauta sur l'occasion, sans même é
 chapitreDeux.fromTo(".sec2-phrase01",{opacity: 1}, {opacity: 0, duration: 3}, '<3')
 chapitreDeux.to(".sec2-phrase01",{y: '-100vh', duration: 5}, '<0.5')
 chapitreDeux.to('#sec2-nuage', {y: '-200vh', duration: 5}, '<0.5')
-chapitreDeux.to('#peche-poisson', {y: '-205vh', duration: 5}, '<-4')
+chapitreDeux.to('#peche-poisson', {top: '-100%', duration: 5}, '<-4')
 chapitreDeux.fromTo(
   ".ligne-peche",
   { drawSVG: "0% 0%" },
@@ -120,11 +120,11 @@ chapitreDeux.fromTo(".poisson4", {opacity: 0}, {opacity:1, duration: 2},"<-0.5")
 chapitreDeux.to(".poisson4", {
   duration: 10, 
   ease: "power1.inOut",
-  rotate: "180deg",
   motionPath:{
     path: ".ligne-peche",
     align: ".ligne-peche",
-    alignOrigin: [0, 0],
+    alignOrigin: [0.5, 0.5],
+    autoRotate: -180,
     start: 1,
     end: 0
   }
@@ -237,6 +237,7 @@ chapitreQuatre.to(".grotte-groupe, .sec4-phrase04, .sec4-phrase03", {x: '100vw',
 chapitreQuatre.to(".sec4-phrase04, .sec4-phrase03, .grotte-groupe",{opacity: 0, duration: 0});
 chapitreQuatre.to("#section4-grotte", {x: '-425vw', duration: 5},'<')
 chapitreQuatre.fromTo(".spritesheet1", {opacity:0} ,{opacity: 1},'<1')
+chapitreQuatre.to(".spritesheet1",{duration: 5})
 
 
 /*---------------------------------------------------------- 
@@ -269,6 +270,7 @@ chapitreCinq.to("#section05",{y: '-100vh', duration: 5}, '<')
 chapitreCinq.to(".sec5-phrase01", {text: "Il ne leur restait qu'un chemin à prendre, mais lequel..", duration: 2})
 chapitreCinq.fromTo(".spritesheet2", {opacity:0}, {opacity:1, duration:5 })
 chapitreCinq.to(".sec5-phrase01", {text: '"Suivons cette enseigne", cria Lilo', duration: 2}, '<5')
+chapitreCinq.to(".sec5-phrase01",{duration: 5})
 
 
 /*---------------------------------------------------------- 
@@ -318,7 +320,7 @@ chapitreSix.to(".lilo-heureuse",{y:"2vh", yoyo: true, repeat: 40, duration:0.5 ,
 chapitreSix.to(".lilo-heureuse",{x:'75vw', duration: 5}, '<');
 chapitreSix.to("#section06-01",{y: '-200vh', duration: 5},'<3')
 chapitreSix.to("#section06-02",{y: '-200vh', duration: 5}, '<')
-
+chapitreSix.to("#section06-02",{y: '-220vh', duration: 5})
 
 
 

@@ -101,9 +101,9 @@ chapitreDeux.fromTo(
   ".ligne-peche",
   { drawSVG: "0% 0%" },
   {
-    drawSVG: "0% 100%",
+    drawSVG: "0% 90%",
     duration: 10,
-    ease: "power1.inOut"
+    ease: "none"
   }
 ),'5';
 chapitreDeux.fromTo('.poisson1', {x: '100%'}, {x: '-780%', duration: 8})
@@ -113,23 +113,22 @@ chapitreDeux.to(
   {
     drawSVG: "0% 0%",
     duration: 10,
-    ease: "power1.inOut"
+    ease: "none"
   }
 ),'2';
-chapitreDeux.fromTo(".poisson4", {opacity: 0}, {opacity:1, duration: 2},"<-0.5")
 chapitreDeux.to(".poisson4", {
-  duration: 10, 
-  ease: "power1.inOut",
+  duration: 8, 
+  ease: "none",
   motionPath:{
     path: ".ligne-peche",
     align: ".ligne-peche",
     alignOrigin: [0.5, 0.5],
-    autoRotate: -180,
+    autoRotate: true,
     start: 1,
     end: 0
   }
 },"<");
-
+chapitreDeux.fromTo(".poisson4", {opacity: 0}, {opacity:1, duration: 2},"<")
 
 
 /*---------------------------------------------------------- 
@@ -161,9 +160,9 @@ let chapitreTrois = gsap.timeline({
   chapitreTrois.to(".sec3-phrase01",{text:"Des crystaux, aussi tranchant qu'un couteau se dressaient devant elles.", ease:'none', duration: 1.3}, '<+=3')
   chapitreTrois.to(".sec3-phrase01",{text:"Les évitants de près, le duo se faufilait pour les éviter.", ease:'none', duration: 1.3}, '<+=3')
   chapitreTrois.fromTo(".sec3-phrase01",{opacity: 1}, {opacity: 0, duration: 3}, '<3')
-  chapitreTrois.fromTo(".crystal01", {x:'-115%'}, {x:'-5%', duration: 0.5 }, '5')
+  chapitreTrois.fromTo(".crystal01", {x:'-115%'}, {x:'-5%', duration: 0.5 }, '<-3')
   chapitreTrois.to(".crystal01", {y:'-150%', duration: 7, ease: 'none' }, '<-0.5')
-  chapitreTrois.fromTo(".crystal02", {x:'115%'}, {x:'0', duration: 0.5 }, '7')
+  chapitreTrois.fromTo(".crystal02", {x:'115%'}, {x:'0', duration: 0.5 }, '<2')
   chapitreTrois.to(".crystal02", {y:'-150%', duration: 7, ease: 'none' }, '<-0.5')
   chapitreTrois.fromTo(".gros-crystal",{y:"175%"}, {y:"-2%", duration: 2, ease: 'none'}, '+=0.5')
   chapitreTrois.to(".groupecrystal03",{x:"330%", y:"-60%", rotate:"20deg" ,duration:3 ,ease:'power1.out'}, '+=3')

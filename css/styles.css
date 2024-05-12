@@ -276,18 +276,24 @@ header a:hover {
 
 #peche-poisson {
     width: 50vw;
-    height: 225vh;
+    height: 175vh;
     left: 41vw;
-    top: 15vh;
+    top: 0vh;
+    border: 2px solid red;
 }
 
 
 #ligne {
-    width: 30;
+    height: 175vh;
     fill: none;
     stroke: var(--vertfonce);
     position: absolute;
+    bottom: -17vh;
+}
 
+.ligne-peche {
+    position: absolute;
+    bottom: 15vh;
 }
 
 
@@ -320,9 +326,9 @@ header a:hover {
 }
 
 .poisson4 {
-    bottom: 4vh;
-    left: 14vw;
+    bottom: -60vh;
     width: 25vw;
+    left: 5%;
 }
 
 .poisson2 {
@@ -447,7 +453,7 @@ bottom: 5vh;
 ---------------------------------------------------------*/ 
 #section4 {
     width: 100vw;
-    height: 4000vh;
+    height: 2100vh;
 
 }
 #section04 {

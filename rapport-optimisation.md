@@ -13,7 +13,7 @@ La taille de certaines images est très grande, alors que je n'ai pas besoin qu'
 Pour optimiser, je vais devoir réduire la taille des images pour qu’elle soit moins lourde. Puisque je n’ai pas besoin que certaines de mes images soient aussi grandes, je vais donc réduire leur format. Les images vont donc passer de plus de 2000 pixels en largeur à 750 pixels.
 
 ### Résultat
-Cela a amélioré la performance sur mobile et sur desktop. Ça indique que deux images pourraient être réduites encore davantage, donc je pourrais envisager de le faire. Le score total est passé d'environ 50% à 76% sur mobile. J'ai ensuite refait le test sur les ordis du, Collège et le score est redescendu à 59%.
+Cela a amélioré la performance sur mobile et sur desktop. Ça indique que deux images pourraient être réduites encore davantage, donc je pourrais envisager de le faire. Le score total est passé d'environ 50% à 76% sur mobile. J'ai ensuite refait le test sur les ordis du, Collège et le score est redescendu à 59% sur mobile.
 
 ## Problème #2
 
@@ -43,4 +43,4 @@ Cela a amélioré les performances du site web. Certaines images n'ont pas encor
 
 ## Rapport projet ScrollyTelling après optimisation
 
-[Page Speed Insights - Rapport du 13 mai 2024, 13:03:02](https://pagespeed.web.dev/analysis/https-delphine-tim-momo-com/6mee6d0p3s?form_factor=mobile)
+[Page Speed Insights - Rapport du 13 mai 2024, 13:03:02](https://pagespeed.web.dev/analysis/https-delphine-tim-momo-com/6mee6d0p3s?form_factor=desktop)

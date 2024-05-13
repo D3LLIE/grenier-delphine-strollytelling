@@ -40,3 +40,7 @@ Je vais modifier le format de certaines images qui semblent plus lourdes et qui 
 
 ### Résultat
 Cela a amélioré les performances du site web. Certaines images n'ont pas encore été changées en .webp, car cela ne fonctionnait pas (images de fond). Éventuellement, il serait pratique de changer leur format également.
+
+## Rapport projet ScrollyTelling après optimisation
+
+[Page Speed Insights - Rapport du 13 mai 2024, 13:03:02](https://pagespeed.web.dev/analysis/https-delphine-tim-momo-com/6mee6d0p3s?form_factor=desktop)

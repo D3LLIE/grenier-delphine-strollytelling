@@ -274,29 +274,12 @@ header a:hover {
     top: 10vh;
 }
 
-#peche-poisson {
-    width: 50vw;
-    height: 175vh;
-    left: 41vw;
-    top: 0vh;
-    border: 2px solid red;
+.pecher {
+    width: 200vw;
+    height: 100vh;
+    border: red 2px solid;
+    left: -10vw;
 }
-
-
-#ligne {
-    height: 175vh;
-    fill: none;
-    stroke: var(--vertfonce);
-    position: absolute;
-    bottom: -17vh;
-}
-
-.ligne-peche {
-    position: absolute;
-    bottom: 15vh;
-}
-
-
 
 .assis {
     top: 10vh;
@@ -308,6 +291,11 @@ header a:hover {
     width: 25vw;
     top: 15vh;
     left: -1vw;
+}
+
+.monsvg, #path {
+    position: absolute;
+    left: -40vw;
 }
 
 .poissons {
@@ -326,9 +314,9 @@ header a:hover {
 }
 
 .poisson4 {
-    bottom: -60vh;
     width: 25vw;
-    left: 5%;
+    left: 4%;
+    top: -5%;
 }
 
 .poisson2 {

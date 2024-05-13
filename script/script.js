@@ -8,8 +8,8 @@ gsap.registerPlugin(MotionPathPlugin);
 /*---------------------------------------------------------- 
 # GSAP Bibliothèques payantes
 ----------------------------------------------------------*/ 
-gsap.registerPlugin(MorphSVGPlugin);
-gsap.registerPlugin(DrawSVGPlugin);
+/*gsap.registerPlugin(MorphSVGPlugin);
+gsap.registerPlugin(DrawSVGPlugin);*/
 
 
 /*---------------------------------------------------------- 
@@ -96,39 +96,36 @@ chapitreDeux.to(".sec2-phrase01",{text:"Lilo sauta sur l'occasion, sans même é
 chapitreDeux.fromTo(".sec2-phrase01",{opacity: 1}, {opacity: 0, duration: 3}, '<3')
 chapitreDeux.to(".sec2-phrase01",{y: '-100vh', duration: 5}, '<0.5')
 chapitreDeux.to('#sec2-nuage', {y: '-200vh', duration: 5}, '<0.5')
-chapitreDeux.to('#peche-poisson', {top: '-100%', duration: 5}, '<-4')
 chapitreDeux.fromTo(
-  ".ligne-peche",
+  "path",
   { drawSVG: "0% 0%" },
   {
-    drawSVG: "0% 90%",
+    drawSVG: "0% 100%",
     duration: 10,
     ease: "none"
   }
 ),'5';
 chapitreDeux.fromTo('.poisson1', {x: '100%'}, {x: '-780%', duration: 8})
 chapitreDeux.fromTo('.poisson3', {x: '-150%'}, {x: '700%', duration: 10}, '<0.5')
+chapitreDeux.to("#poiss", {
+  duration: 10, 
+  ease: "none",
+  motionPath:{
+    path: "#path",
+    align: "#path",
+    autoRotate: 180,
+    alignOrigin: [0.5, 0.5],
+    start: 1,
+    end: 0,
+  }
+})
 chapitreDeux.to(
-  ".ligne-peche",
-  {
+  "path",{
     drawSVG: "0% 0%",
     duration: 10,
     ease: "none"
   }
-),'2';
-chapitreDeux.to(".poisson4", {
-  duration: 8, 
-  ease: "none",
-  motionPath:{
-    path: ".ligne-peche",
-    align: ".ligne-peche",
-    alignOrigin: [0.5, 0.5],
-    autoRotate: true,
-    start: 1,
-    end: 0
-  }
-},"<");
-chapitreDeux.fromTo(".poisson4", {opacity: 0}, {opacity:1, duration: 2},"<")
+),'<-4';
 
 
 /*---------------------------------------------------------- 
@@ -186,7 +183,6 @@ let chapitreQuatre = gsap.timeline({
     scrub: true,
     start: 'top 0%',
     end: 'bottom 75%',
-    markers: true,
     trigger: '#section4',
     onEnter: () => {
       nuage.play(0);
@@ -248,7 +244,6 @@ let chapitreCinq = gsap.timeline(
       pin: true,
       pinSpacing: false,
       scrub: true,
-      marker: true,
       start: 'top 0%',
       end: 'bottom 75%',
       trigger: '#section5',
@@ -282,7 +277,6 @@ let chapitreSix = gsap.timeline({
     scrub: true,
     start: 'top 0%',
     end: 'bottom 75%',
-    markers: true,
     trigger: '#section6',
     onEnter: () => {
       nuage.play(0);

@@ -13,7 +13,7 @@ La taille de certaines images est très grande, alors que je n'ai pas besoin qu'
 Pour optimiser, je vais devoir réduire la taille des images pour qu’elle soit moins lourde. Puisque je n’ai pas besoin que certaines de mes images soient aussi grandes, je vais donc réduire leur format. Les images vont donc passer de plus de 2000 pixels en largeur à 750 pixels.
 
 ### Résultat
-Cela a amélioré la performance sur mobile et sur desktop. Ça indique que deux images pourraient être réduites encore davantage, donc je pourrais envisager de le faire. Le score total est passé d'environ 50% à 76% sur mobile. En utisant les ordinateurs de l'école, ce chiffre passe plutôt à 59%.
+Cela a amélioré la performance sur mobile et sur desktop. Ça indique que deux images pourraient être réduites encore davantage, donc je pourrais envisager de le faire. Le score total est passé d'environ 50% à 76% sur mobile. En utisant les ordinateurs de l'école, ce chiffre passe plutôt à 
 
 ## Problème #2
 

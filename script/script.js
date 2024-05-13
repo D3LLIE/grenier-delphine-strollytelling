@@ -62,6 +62,15 @@ let chapitreUn = gsap.timeline({
   chapitreUn.to(".parallax",{y: '-100vh', duration: 5})
   chapitreUn.to(".tombe",{y: '-100vh', duration: 5}, '<')
   chapitreUn.to("#sec1-lilo2",{y:"200%",duration:5 ,ease:'none'})
+  chapitreUn.fromTo(
+    "path",
+    { drawSVG: "0% 0%" },
+    {
+      drawSVG: "0% 100%",
+      duration: 4,
+      ease: "none"
+    },
+    '<');
   chapitreUn.to("#sec1-lilo2",{opacity: "0", duration: 3});
 
 
@@ -96,36 +105,21 @@ chapitreDeux.to(".sec2-phrase01",{text:"Lilo sauta sur l'occasion, sans même é
 chapitreDeux.fromTo(".sec2-phrase01",{opacity: 1}, {opacity: 0, duration: 3}, '<3')
 chapitreDeux.to(".sec2-phrase01",{y: '-100vh', duration: 5}, '<0.5')
 chapitreDeux.to('#sec2-nuage', {y: '-200vh', duration: 5}, '<0.5')
-chapitreDeux.fromTo(
-  "path",
-  { drawSVG: "0% 0%" },
-  {
-    drawSVG: "0% 100%",
-    duration: 10,
-    ease: "none"
-  }
-),'5';
 chapitreDeux.fromTo('.poisson1', {x: '100%'}, {x: '-780%', duration: 8})
 chapitreDeux.fromTo('.poisson3', {x: '-150%'}, {x: '700%', duration: 10}, '<0.5')
-chapitreDeux.to("#poiss", {
+chapitreDeux.to(".poisson4", {
   duration: 10, 
-  ease: "none",
+  yoyo: true,
+  ease: "power1.inOut",
   motionPath:{
-    path: "#path",
-    align: "#path",
+    path: "#path2",
+    align: "#path2",
     autoRotate: 180,
     alignOrigin: [0.5, 0.5],
     start: 1,
     end: 0,
   }
-})
-chapitreDeux.to(
-  "path",{
-    drawSVG: "0% 0%",
-    duration: 10,
-    ease: "none"
-  }
-),'<-4';
+});
 
 
 /*---------------------------------------------------------- 

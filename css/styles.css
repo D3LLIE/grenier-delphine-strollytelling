@@ -239,6 +239,24 @@ header a:hover {
     top: 20vh;
 }
 
+.monsvg {
+    width: 100vw;
+    height: 50vh;
+    rotate: 90deg;
+    left: 35vw;
+    top: 10vh;
+    position: absolute;
+}
+
+.monsvg2 {
+    width: 100vw;
+    height: 100vh;
+    scale: 1.5;
+    position: absolute;
+}
+
+
+
 /*--------------------------------------------------------- 
 # Chapitre 2
 ---------------------------------------------------------*/ 
@@ -274,12 +292,6 @@ header a:hover {
     top: 10vh;
 }
 
-.pecher {
-    width: 200vw;
-    height: 100vh;
-    border: red 2px solid;
-    left: -10vw;
-}
 
 .assis {
     top: 10vh;
@@ -293,10 +305,6 @@ header a:hover {
     left: -1vw;
 }
 
-.monsvg, #path {
-    position: absolute;
-    left: -40vw;
-}
 
 .poissons {
     width: 15vw;

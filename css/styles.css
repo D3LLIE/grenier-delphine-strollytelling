@@ -246,6 +246,7 @@ header a:hover {
     left: 35vw;
     top: 10vh;
     position: absolute;
+    display: none; /*---------------------------------------------------------- ENLEVER LORSQUE LOCAL ----------------------------------------------------------*/ 
 }
 
 .monsvg2 {
@@ -680,6 +681,7 @@ body.is-scrolling .spritesheet2, body.is-scrolling .spritesheet1 {
     width: 7vw;
     aspect-ratio: 1/1;
     top: 5vh;
+    display: none;/*---------------------------------------------------------- ENLEVER LORSQUE LOCAL ----------------------------------------------------------*/ 
 
 }
 
@@ -743,6 +745,7 @@ ul.technique-gsap{
     z-index: 1000;
     top: 0;
     left: 0;
+    display: none;
 }
 
 ul.technique-gsap li{

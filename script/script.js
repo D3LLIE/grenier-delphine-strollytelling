@@ -62,7 +62,7 @@ let chapitreUn = gsap.timeline({
   chapitreUn.to(".parallax",{y: '-100vh', duration: 5})
   chapitreUn.to(".tombe",{y: '-100vh', duration: 5}, '<')
   chapitreUn.to("#sec1-lilo2",{y:"200%",duration:5 ,ease:'none'})
-  chapitreUn.fromTo(
+  /*chapitreUn.fromTo(
     "path",
     { drawSVG: "0% 0%" },
     {
@@ -70,7 +70,7 @@ let chapitreUn = gsap.timeline({
       duration: 4,
       ease: "none"
     },
-    '<');
+    '<');*/
   chapitreUn.to("#sec1-lilo2",{opacity: "0", duration: 3});
 
 
@@ -288,13 +288,13 @@ chapitreSix.to("#section06-01",{y: '-100vh', duration: 5}, '<')
 chapitreSix.to(".sec6-phrase01",{text:"Il ne leur restait qu'à se dire aurevoir", ease: 'none', duration: 3})
 chapitreSix.fromTo("#sec6-nuage .lilo-mimi",{opacity: 1}, {opacity: 0, duration: 2, yoyo: true, repeat: 1})
 chapitreSix.fromTo("#sec6-nuage .calin",{opacity: 0}, {opacity: 1, duration: 2, yoyo: true, repeat: 1}, '<')
-chapitreSix.to("#svg1", {
+/*chapitreSix.to("#svg1", {
   duration: 3, 
   morphSVG:{
     shape:"#svg2", 
     shapeIndex:2
   }
-});
+});*/
 chapitreSix.fromTo('.doigt', {opacity: 0}, {opacity: 1, stagger: 0.5})
 chapitreSix.fromTo('#svg1, .doigt', {opacity: 1}, {opacity: 0, duration:3}, "<4")
 chapitreSix.to("#sec6-nuage",{y: '25vh', x: '2vw', duration: 3})
@@ -308,6 +308,3 @@ chapitreSix.to(".lilo-heureuse",{x:'75vw', duration: 5}, '<');
 chapitreSix.to("#section06-01",{y: '-200vh', duration: 5},'<3')
 chapitreSix.to("#section06-02",{y: '-200vh', duration: 5}, '<')
 chapitreSix.to("#section06-02",{y: '-220vh', duration: 5})
-
-
-
